@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Suggestions</title>
+    <link rel="shortcut icon" type="image/jpg" 
+    href="mountain.png"/>
+  </head>
+<body onload='focus()'>
+<style>
+html, body{
+width: 100%;
+height: 100%;
+}
+</style>
+<script src="load.js"></script>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>#countdown{text-align:center;font-size:3vw;margin-top:0;background-color:grey;}</style>
+</head>
+<body>
+<a href="/" style='font-size: 2vw;'>Back To Home Page</a>    
+<br>
+<h3>Select one of the options below</h3>
+<div id='servers'>
+
+</div>
+
+<h3>Currently on option: <span id='currentServer'></span></h3>
+
+<iframe style='height: 95vh; width: 95vw;' frameborder="0" id="518929564" allowtransparency="true" 
+        src=""></iframe>
+<br>
+<script>
+document.getElementById('518929564').src='https://docs.google.com/forms/d/e/1FAIpQLSd_KmGN-KpfFg41THjYJLLvSS4B7GVWij9hw6pzkS6hkmEM7g/viewform?embedded=true';
+document.getElementById('currentServer').innerHTML = '1';
+
+const links = ['https://docs.google.com/forms/d/e/1FAIpQLSd_KmGN-KpfFg41THjYJLLvSS4B7GVWij9hw6pzkS6hkmEM7g/viewform?embedded=true',
+
+'/jotform.html', 
+
+"https://share.hsforms.com/1TnvrRyb6TF-A81UjE0LKvAd1v91",
+
+"https://s.surveyplanet.com/62755e5207c1587a9ceb45f9",
+
+"https://www.surveymonkey.com/r/927H29W"];
+
+links.forEach(server);
+
+function server(item, index) {
+window[("s"+(index+1))] = function(){
+document.getElementById('518929564').src= item;
+document.getElementById('currentServer').innerHTML = (index+1);
+document.getElementById('518929564').focus();
+ }
+document.getElementById('servers').innerHTML += "<button style='font-size: 2vw;' onclick="+("s"+(index+1))+"()>Option "+(index+1)+"</button>";
+}
+</script>
+<script src="fullScreen.js"></script>
+<script>
+function focus() {document.getElementById('518929564').focus();}
+</script>
+</body>
+</html>
