@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Collaborative Docs</title>
+
+<link rel="shortcut icon" href="Docs.png" type="image/png"/>
+
+<script src="load.js"></script>
+<body>
+   <a href='/'>Back to Home Page</a>
+<h1>Type doc code in the box below</h1>
+
+<input id="key" onkeyup='updateRedirect()' class='center' autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+
+<br><br>
+
+<h3>Currently In Doc: <span id='inRoom'></span></h3>
+
+<div id='iframeDiv'>
+<iframe id='join' src='' width='100%' height='500px'></iframe>
+</div>
+
+<script>
+function updateRedirect() {
+var iFD = document.getElementById("iframeDiv");
+iFD.innerHTML = '';
+iFD.innerHTML = "<iframe id='join' src='"+'https://2e6caad7-ae22-4679-bc10-c7cc7b5df5ae.id.repl.co/#'+document.getElementById("key").value+"' width='100%' height='500px'></iframe>";
+
+
+document.getElementById("inRoom").innerHTML = document.getElementById("key").value;
+}
+</script>
+</body>
+</html>
