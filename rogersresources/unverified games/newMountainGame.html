@@ -1,0 +1,347 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Mountain Game</title>
+    <link rel="shortcut icon"
+    type="image/jpg" href="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf-970-80.jpg.webp"
+    />
+  </head>
+<head>
+<style>
+  body {
+  animation: 30000ms ease-in-out infinite color-change;
+}
+@keyframes color-change {
+  0% {
+    background-color: #3f8d9b;
+  }
+  20% {
+    background-color: #3f8d9b;
+  }
+  40% {
+    background-color: #3f8d9b;
+  }
+  60% {
+    background-color: white;
+  }
+  80% {
+    background-color: #3f8d9b;
+  }
+  100% {
+    background-color: #3f8d9b;
+  }
+}
+
+@keyframes second-color-change {
+  0% {
+    background-color: white;
+  }
+  20% {
+    background-color: white;
+  }
+  40% {
+    background-color: white;
+  }
+  60% {
+    background-color: #3f8d9b;
+  }
+  80% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
+}
+.upgrade-btn {
+	box-shadow: 4px 5px 0px -1px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:22px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 1vw;
+	font-weight:bold;
+	padding: 0.2vw 0.5vw;
+	text-decoration:none;
+	text-shadow:0px 3px 50px #2b665e;
+}
+.upgrade-btn:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.upgrade-btn:active {
+	position:relative;
+	top:1px;
+}
+
+p {
+font-size: 1.25vw;
+}
+</style>
+</head>
+<body onload="load();">
+
+<div style="position:absolute;right:5vw;top: 0vw;text-align:center;">
+ <a href="/" style="font-size:1vw;" >Back To Home Page</a>
+<h1 style="text-shadow: 2px 2px 0px #ffffff;font-size:2vw;">The Mountain Game</h1>
+<button onclick="addMoney(1)" class="upgrade-btn" style="font-size:2vw;" id="bigmoneybutton">Dig A Piece Of Trail</button>
+<p style="text-shadow: 2px 2px 0px #ffffff;font-size:3vw;">Money: <span id="money"></span></p>
+<p style="text-shadow: 2px 2px 0px #ffffff;font-size:2vw;">Money Per Second: <span id="mps"></span></p>
+<button onclick="Confimrreset()" class="upgrade-btn">RESET</button>
+</div>
+
+<div id="container" style="display:grid;grid-template-columns:1fr 1fr;grid-gap:1vw;">
+
+<div style="display: inline-block;font-family:Arial;font-size:10pt;border:1px solid #808080;text-align:center;width: 25vw;height: 95vh;overflow-y: auto;animation: 30000ms ease-in-out infinite second-color-change;">
+<h3 style='font-size:1vw'>Shop:</h3>
+<div id='shop'>
+</div>
+</div>
+</div>
+<script>
+var mps = 0;
+ls('money', 0);
+setVar("money", ls(("money"), 0));
+
+Item("TrailMakers", 1, 50, 1.01, "Trail Makers", "Trail Maker");
+
+Item("Hikers", 10, 550, 1.02, "Hikers", "Hiker");
+Item("TrailGuides", 50, 3000, 1.03, "Trail Guides", "Trail Guide");
+Item("SkiSlopes", 1000, 60000, 1.04, "Ski Slopes", "Ski Slope");
+Item("Skier", 5000, 150000, 1.05, "Skiers", "Skier");
+Item("SkiLift", 50000, 1000000, 1.06, "Ski Lifts", "Ski Lift");
+Item("GiftShop", 200000, 3500000, 1.07, "Gift Shops", "Gift Shop");
+Item("RockClimbing", 1000000, 17000000, 1.08, "Climbing Areas", "Climbing Area");
+Item("RockClimbers", 5000000, 70000000, 1.09, "Rock Climbers", "Rock Climber");
+Item("HangGliders", 25000000, 300000000, 1.10, "Hang Gliders", "Hang Glider");
+Item("Museums", 125000000, 1000000000, 1.10, "Museums", "Museum");
+Item("Cliffs", 500000000, 300000000000, 1.11, "Cliffs", "Cliff");
+Item("Bungees", 2500000000, 10000000000, 1.12, "Bungees", "Bungee");
+Item("BungeeJumpers", 10000000000, 35000000000, 1.13, "Bungee Jumpers", "Bungee Jumper");
+Item("Rivers", 50000000000, 150000000000, 1.14, "Rivers", "River");
+Item("Rafts", 250000000000, 650000000000, 1.15, "Rafts", "Raft");
+Item("Rafters", 2500000000000, 6000000000000, 1.16, "Rafters", "Rafter");
+Item("BikePath", 10000000000000, 20000000000000, 1.17, "Bike Paths", "Bike Path");
+Item("Bikes", 50000000000000, 90000000000000, 1.18, "Bikes", "Bike");	
+Item("Biker", 250000000000000, 400000000000000, 1.19, "Bikers", "Biker");
+Item("Lake", 750000000000000, 1100000000000000, 1.20, "Lakes", "Lake");
+Item("Fish", 3800000000000000, 5500000000000000, 1.21, "Fishes", "Fish");
+Item("Fisher", 15500000000000000, 21500000000000000, 1.22, "Fishers", "Fisher");	
+
+Item("TRAILMIX", 9999999999999999999999, 9999999999999999999999999, 2.69, "Trail Mix Bags", "Trail Mix Bag");
+
+function Item(name, MoneyPerSecond, cost, expPrice, plural, snglr) {
+setVar(name, ls((name), 0));
+
+ if (localStorage[name]) {
+ 
+ } else {
+ localStorage[name] = 0;
+ }
+
+document.getElementById("shop").innerHTML += '<div id="'+name+"Holder"+'" style="display: inline-block;padding:5px;font-family:Arial;font-size:1vw;border:1px solid #808080;text-align:center;text-shadow: 1px 1px 0px #3f8d9b;width:90%;"></div><br><br>';
+
+document.getElementById(name+"Holder").innerHTML += '<button id="'+name+'buyButton" onclick="'+name+'()" class="upgrade-btn">Buy '+snglr+'</button>';
+
+document.getElementById(name+"Holder").innerHTML += '<p id="owned'+name+'">Owned '+plural+': </p>';
+document.getElementById('owned'+name).innerHTML += '<span id="'+name+'"></span>';
+
+document.getElementById(name+"Holder").innerHTML += '<p id="'+name+'CostHolder">'+snglr+' Price: </p>';
+document.getElementById(name+'CostHolder').innerHTML += '<span id="'+name+'Cost"></span>';
+
+document.getElementById(name+"Holder").innerHTML += '<p id="'+name+'MPSHolder">Money Per Second: </p>';
+document.getElementById(name+'MPSHolder').innerHTML += '<span id="'+name+'MPS"></span>';
+
+document.getElementById(name+'MPS').innerHTML = nm(MoneyPerSecond);
+
+var nextCost = Math.floor(cost * Math.pow(expPrice, localStorage[name]));
+document.getElementById(name+'Cost').innerHTML = nm(nextCost);
+document.getElementById(name).innerHTML = nm(localStorage[name]);
+mpsUpdate(localStorage[name]*MoneyPerSecond);
+window[name] = function() {
+ if (localStorage.money == "NaN") {
+localStorage.money = 0;
+}
+ if (localStorage.money >= nextCost) {
+takeMoney(nextCost);
+localStorage[name] = (Number(localStorage[name])+1);
+document.getElementById(name).innerHTML = nm(localStorage[name]);
+document.getElementById(name+'MPS').innerHTML = nm(MoneyPerSecond);
+mpsUpdate(MoneyPerSecond);
+ }
+nextCost = Math.floor(cost * Math.pow(expPrice, localStorage[name]));
+ document.getElementById(name+'Cost').innerHTML = nm(nextCost);
+};
+window.setInterval(function() {
+ addMoney(Number(localStorage[name])*MoneyPerSecond);
+ }, 1000);
+appendToFunct('reset', function(){
+localStorage[name] = 0;
+document.getElementById(name+'Cost').innerHTML = nm(cost);
+document.getElementById(name).innerHTML = nm(localStorage[name]);
+ });
+}
+
+
+function adls(name, add) {
+var Stored=(Number(localStorage[name])+add);
+localStorage[name] = Stored;
+document.getElementById(name).innerHTML = nm(localStorage[name]);
+}
+
+function addMoney(add) {
+var AddMoney=(Number(localStorage.money)+add);
+localStorage.money = AddMoney;
+document.getElementById("money").innerHTML = nm(localStorage.money);
+}
+
+function takeMoney(take) {
+var TakeMoney=(Number(localStorage.money)-take);
+localStorage.money = TakeMoney;
+document.getElementById("money").innerHTML = nm(localStorage.money);
+}
+
+function setVar(name, value) {
+window[name] = value;
+return value;
+}
+
+function load() {
+document.getElementById("money").innerHTML = nm(localStorage.money);
+}
+
+function ls(name, ifNew) {
+ if (localStorage[name]) {
+ localStorage[name] = localStorage[name];
+ } else {
+ localStorage[name] = ifNew;
+ }
+return localStorage[name];
+}
+
+function appendToFunct(fn, callback) {
+  window[fn] = (function(fn){
+    return function() {
+      fn();
+      callback();
+    };
+ }(window[fn]));
+}
+
+function reset() {
+localStorage.money = 0;
+mps = 0;
+document.getElementById("mps").innerHTML = mps;
+}
+
+function Confimrreset() {
+var confirm = prompt("Type 'yes' To Comfirm reset", "NO");
+if (confirm == 'yes') {
+reset();
+ }else{
+alert("NO ACTION TAKEN");
+ }
+}
+
+function add(num) {
+  numString = num.toString();
+  numArray = numString.split('').map(function(t) {
+    return parseInt(t);
+  });
+
+  function reducer(theNumArray) {
+    let sum = 0;
+    for (var i = 0; i < theNumArray.length; i++) {
+      sum = sum + theNumArray[i];
+
+    }
+    return sum;
+  }
+  newNum = reducer(numArray);
+
+  return(newNum);
+}
+
+function isString(x) {
+    return Object.prototype.toString.call(x) === '[object String]';
+}
+
+function mpsUpdate(add) {
+if (isString(add)) {
+mpsUpdate(Number(add));
+}
+else {
+mps += add;
+document.getElementById("mps").innerHTML = nm(mps);
+ }
+}
+
+function nm(f){
+var a=[" thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"];
+function d(j){
+var i=0,h="";
+if(!isFinite(j)){return (nm(99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999))}
+if(j>=1000000){j/=1000;while(Math.round(j)>=1000){j/=1000;i++}if(i>=a.length){return (nm(99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999))}else{
+h=a[i]}
+}return(Math.round(j*1000)/1000)+h}
+var g=["","un","duo","tre","quattuor","quin","sex","septen","octo","novem"];var b=["decillion","vigintillion","trigintillion","quadragintillion","quinquagintillion","sexagintillion","septuagintillion","octogintillion","nonagintillion","decintillion","undecintillion","duodecintillion","tredecintillion"];
+for(var c in b){
+for(var e in g){
+a.push(" "+g[e]+b[c])}
+ }return(d(f))
+}
+
+
+document.getElementById('bigmoneybutton').addEventListener("keydown", (e) => {
+  if (e.keyCode == 13) {
+    e.preventDefault();
+  }
+});
+
+function welcomeBack() {
+if (localStorage.saveLeaveDate) {
+var awayTime = ((new Date().getTime() - Number(localStorage.saveLeaveDate))/1000);
+var awayMoney = (Math.floor(awayTime*mps));
+addMoney(awayMoney)
+document.write( '<div style=\"opacity:1;background-color:#ccc;position:fixed;width:100%;height:100vh;top:0px;left:0px;z-index:1000;display: block;\" id=\"awayMoneyScreen\" onclick=\"hideDiv()\">\n' );
+document.write( '<center>\n' );
+document.write( '<h2 style="font-size:3vw">Welcome Back!</h2>\n' );
+document.write( '<br>\n' );
+document.write( '<br>\n' );
+document.write( '<br>\n' );
+document.write( '<br>\n' );
+document.write( '<p style="font-size:2vw;">You Earned: <span id=\"awayCash\">'+nm(awayMoney)+'</span> While You Were Away</p>\n' );
+document.write( '<p style="font-size:2vw;">(Click Anywhere to Continue)</p>\n' );
+document.write( '</center>\n' );
+document.write( '</div>' );
+
+}else{
+localStorage.saveLeaveDate = 0;
+ }
+}
+
+function gettheDate() {
+var leaveTime = new Date().getTime();
+localStorage.saveLeaveDate = leaveTime;
+}
+
+window.addEventListener("beforeunload", function(event) {
+  gettheDate();
+  event.returnValue = "Are You Sure You Want To Leave THIS GAME IS GREAT!";
+  gettheDate();
+});
+
+function hideDiv() {
+document.getElementById('awayMoneyScreen').style.display = "none";
+}
+
+welcomeBack();
+</script>
+</body>
+</html>
