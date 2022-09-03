@@ -1,9 +1,7 @@
-
 So, now you have downloaded our folder and need instructions on how everything works.
 Thats what this file is for.
 Anytime you are confused or forget whats up, just open this file for reference to whats going on!
 Anyway, heres the whole propaganda:
-
 
 ~~~Verified Games~~~
 
@@ -46,3 +44,7 @@ How to download:
 	
 	That should make a "RogersResources" folder in your folder that you made. 
 	The "RogersResources" folder will contain all the games you could wish for.
+
+Other Download Meathods:
+	Google Drive: https://drive.google.com/drive/folders/1eG2UlK86xiQuDdzKvp1410Nv17YJYhld?usp=sharing
+	MediaFire: https://www.mediafire.com/folder/hbjd3f54flcgt/rogersresources#hbjd3f54flcgt
