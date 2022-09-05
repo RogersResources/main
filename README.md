@@ -1,4 +1,4 @@
-So, now you have downloaded our folder and need instructions on how everything works.
+So now you have downloaded our folder and need instructions on how everything works.
 Thats what this file is for.
 Anytime you are confused or forget whats up, just open this file for reference to whats going on!
 Anyway, heres the whole propaganda:
