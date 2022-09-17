@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<head> 
+	<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>【微段】你好，你是做UI设计的吗?</title>
+    <script src="../phaser.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        margin: 0 auto;
+      }
+      .logo {
+        position: absolute;
+        left: -1000px;
+        top: -1000px;
+      }
+      .share {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 2;
+      }
+      .share img {
+        position: absolute;
+      }
+      .share .sharepng {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+      }
+      .game {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script>
+    var GSENS = [{
+        name: 'liuqiangdong',
+        str: '你好，你是程序猿吗？',
+        me: false,
+        time: 4
+      }, {
+        name: 'kehu',
+        str: '你好，是的，请问你有 什么需求？',
+        me: true,
+        time: 3
+      }, {
+        name: 'liuqiangdong',
+        str: '我们公司想做个App，要 高端大气上档次，我们的 预算比较高，1000左右',
+        me: false,
+        time: 5
+      }, {
+        name: 'kehu',
+        str: '你刚才问什么？',
+        me: true,
+        time: 3
+      }, {
+        name: 'liuqiangdong',
+        str: '我们公司想做个App，要 高端大气上档次，预算 1000左右',
+        me: false,
+        time: 3
+      }, {
+        name: 'kehu',
+        str: '不是这句，是前面一句',
+        me: true,
+        time: 4
+      }, {
+        name: 'liuqiangdong',
+        str: '你好，你是程序猿吗？',
+        me: false,
+        time: 2
+      }, {
+        name: 'kehu',
+        str: '不是',
+        me: true,
+        time: 2
+      }, {
+        name: 'liuqiangdong',
+        str: '。。。',
+        me: false,
+        time: 1
+      }];
+    </script>
+</head>
+<body>
+  <div class="logo">
+    <img src="http://game.webxinxin.com/weiduan/assets/logo1.jpg" alt="" />
+  </div>
+  <div id="share" class="share">
+    <img class="sharepng" src="http://game.webxinxin.com/plane/assets/share.jpg" alt="" />
+  </div>
+  <div id="game" class="game"></div>
+</body>
