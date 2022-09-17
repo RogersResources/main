@@ -3,23 +3,6 @@ Thats what this file is for.
 Anytime you are confused or forget whats up, just open this file for reference to whats going on!
 Anyway, heres the whole propaganda:
 
-~~~Verified Games~~~
-
-Verified games are just games tested and checked by us.
-There is really nothing more or nothing less to it.
-Just one disclaimer, some games in the "main.html" may not work, "main.html" is sort of a testing playground for us.
-
-~~~Unverified Games~~~
-
-Unverified games are safe to have on your computer.
-They are just unverified because they are untested, and wont be maintained.
-That means we don't know if they work or not!
-
-BIG TIP!!!
-	On unverified games there will sometimes (Usually) be a "Back to home page" button, DONT PRESS IT!!!
-	It may open websites that are most likely blocked and will be added to your search history!!
-	Never press "Back to home page"!!!!!!!
-
 ~~~Version~~~
 
 The version is just a way to see if you are up-to-date or not.
@@ -42,9 +25,5 @@ How to download:
 	step 7) right click the zip (2 finger tap)
 	step 8) press "extract here"
 	
-	That should make a "RogersResources" folder in your folder that you made. 
-	The "RogersResources" folder will contain all the games you could wish for.
-
-Other Download Methods:
-	Google Drive: https://drive.google.com/drive/folders/1eG2UlK86xiQuDdzKvp1410Nv17YJYhld?usp=sharing
-	MediaFire: https://www.mediafire.com/folder/hbjd3f54flcgt/rogersresources#hbjd3f54flcgt
+	That should make a "RogersResources" folder or a "main-main" folder in your folder that you made. 
+	The "RogersResources" or "main-main" folder will contain all the games you could wish for.
