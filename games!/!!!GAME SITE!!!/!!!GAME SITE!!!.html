@@ -1,108 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>Login - Powered by Skyward</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<link rel="icon" type="image/x-icon" href="https://www.skyward.com/skyicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login - Powered by Skyward</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAMAMDAAAAEAGACoHAAANgAAACAgAAABAAgAqAgAAN4cAAAQEAAAAQAIAGgFAACGJQAAKAAAADAAAABgAAAAAQAYAAAAAAAAGwAAAAAAAAAAAAAAAAAAAAAAAP///////////////+jSx7+BYrdyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT8WNcfTp5P////////////////////////////////v39dGlj7hyULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Uf////////////////7+/urWy8OJbLdyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUM6dhvjx7v////////////////////////////////fv686ehrhyULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Uf////////////////////////Hk3sqWfbhzULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUNCjjfn08f////////////////////////////////fw7c+hibhzULhzUbh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Uf////////////////////////////fw7NOplLl2VLdzULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUdKnkvr18v////////////////////////////////jy79Knkbh0UrhzULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Uf////////////////////////////////z5996/r719XbdyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UdOok/n18v////////////////////////////////r29Newnbp2VLhzULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ufv49/////////////////////////////////7+/enVy8SLb7dyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UdKnkfnz8P////////////////////////////////z6+N6+rrx7W7dyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UdGlj/Tq5f////////////////////////////////////Tp5M+hirl1U7hzULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUdCii/fw7P////////////////////////////////79/ObOwsCEZrdyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT8aPdO3c1P////////////////////////////////////r39d29rb5+X7dyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUMybgvTq5f///////////////////////////////////+/f2MiTebhzULh0ULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT8CCZOPJvP37+v////////////////////////////////7+/ezZ0MeSd7hyULhzULh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT8eSd/Di2/////////////////////////////////////fv69Sqlbp3VbdyULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyULt5WNiyn/nz8P////////////////////////////////////fw7NevnLt6WbdyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT8KIaurVy/7+/v////////////////////////////////z6+OLGuMCDZbdyT7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULhzUcyagvHk3f////////////////////////////////////38++jRxsWNcbdzULhzULh0Ubh0Ubh0Ubh0Ubh0UbdyT71+X+HEtfz6+f///////////////////////////////////vDh2sybg7h1UrhzULh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT8GGaeXMwP37+v////////////////////////////////////Xt6NWtmbt6WrdyT7h0Ubh0Ubh0Ubh0Ubh0UbdzULp3Vtaumvjy7/////////////////////////////////////r1896+rr+BY7dxT7hzUbh0Ubh0Ubh0UbdyT7h0Ubh0Ubh0Ubh0Ubh0UbdyT7t5WNavnPfw7f////////////////////////////////////38++nTyceRdrhzUbhzULh0Ubh0Ubh0Ubh0UbhzUbhzUMuYf/Di2/////////////////////////////////////7+/vDh2s6fiLp2VbdyT7h0Ubh0UciTebl2VLdzT7h0Ubh0Ubh0Ubh0UbhzULhyUMiTeOza0f7+/f////////////////////////////////////fx7dq3pb5/YLdyT7h0Ubh0Ubh0Ubh0Ubh0UbdyT8GFZuPJvPz6+f////////////////////////////////////v49uTJvcSMcLhzULdzUPn08eDDtcKHarhyT7hzULh0Ubh0Ubh0Ubh0UbdyT75+Xty6qfn08v////////////////////////////////////79/e7f186eh7p2VbdyT7h0Ubh0Ubh0Ubh0UbdzT7p4VtSqlfXs6P////////////////////////////////////////bu6tq1pMCDZf////////Tq5davm719XbdyT7h0Ubh0Ubh0Ubh0UbhzULh0UsuYf+7d1f7+/v////////////////////////////////////v49uTLvsWNcrhzULdzULh0Ubh0Ubh0UbhzUbdyUMWNcefRxf37+v////////////////////////////////////79/fPo4/////////////78/O3c086ehrp4VrdyT7h0Ubh0Ubh0Ubh0UbdyT79/YNy6qfjz8P////////////////////////////////////////fv69u5p8CDZbdyT7hzULh0Ubh0Ubh0UbdyT7t5WNSrl/Tq5f////////////////////////////////////////////////////////////z49+bOwceRd7l0UrdzT7h0Ubh0Ubh0UbhzULh0UcmVe+vXzf38/P/////////////////////////////////////+/vLl39Srlr19XbdyT7h0ULh0Ubh0UbhzULdyT8OJbOPHuvv39f////////////////////////////////////////////////////////////jz8N/BssOJbLhzULhzULh0Ubh0Ubh0UbdyT7x8W9aum/Xr5v////////////////////////////////////////38++3d1M+ii7t6WbdyT7h0Ubh0Ubh0UbdyT7l2VM2chO3b0/38/P////////////////////////////////////////////////////////////Xs6Nq3pcCDZbdyT7hzULh0Ubh0UbhzULhyUMOJbOLGuPr29P////////////////////////////////////////z6+erWzM2chbp5V7dyT7hzUbh0Ubh0UbdyT719XdWtmfLn4f/+/v////////////////////////////////////////////////////////7+/vLm4NavnL+AYbdyT7hzULh0Ubh0UbdyT7l1U8uZgOvYzv37+/////////////////////////////////////////v49+jTyMybg7t4V7dyT7h0ULh0UbhzULdyT8GEZtu4p/Xt6P////////////Ll3/79/P////////////////////////////////////////79/fDi29Sqlr1+XrdyT7hzULh0UbhzUbdyT7x7W9OplPHk3f7+/f////////////////////////////////////////z49+nUyc6ehrt6WbdyT7dzULh0UbdyULhzUMOIbN69rfbu6v///7+CY9mzofXs6P////////////////////////////////////////////78/O/g2NOplL1+XrdyT7hzULh0UbhzULdyT7+BY9m1o/Tr5v////////////////////////////////////////////z5+OvYz9Gkjr1+XbdyT7dzULh0UbdyT7hzUcSKbdq4prhzULhyUMOJbeHDtfn08f////////////////////////////////////////////38++/g2NSqlb5/X7dyT7hzULh0UbhzULhzUMKIat69rffv6/////////////////////////////////////////////38++/g2Naum8CEZrhzULdyT7h0UbdzT7dzULh0Ubh0UbdyT7l1UsmUeufPxPv49/////////////////////////////////////////////78/PDi2tatmb+CY7dyT7dzULh0UbdyT7h0UcWMcODCs/fx7f////////////////////////////////////////////7+/fTq5d29rcaPdLl2VbdxTrhzULh0Ubh0Ubh0Ubh0UbdyT7p3Vs2dhevYzvz7+v////////////////////////////////////////////79/fLm4Nm0ocGGaLhzUbdyT7h0UbdyT7h0UsWNceDCs/fw7P////////////////////////////////////////////////n08efQxM6gib+AYbh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT7x7WtGkju7e1v38+/////////////////////////////////////////////7+/vXr5t29rcWNcbl1U7dyT7hzULdyT7h0UsWLb96+rvXs6P7+/v////////////////////////////////////////////z7+vLm4Lh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT71+XdOplPDh2f79/P////////////////////////////////////////////////jx7uPJvMuYfrt5WLdxTrdzULdyT7hzUcKIatq2pPLm4P79/P///////////////////////////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT75/X9Srl/Dh2v79/P////////////////////////////////////////////////v39urXzdKmkL+AYbhzULdyT7dyT7dyUL+BY9Sqlu3c0/z5+P///////////////////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT75/X9Sqle/g2P38+/////////////////////////////////////////////////38/PLl39u5qMWNcbl2VLdyTrdyT7dyT7x7Wsycg+XMv/jx7v///v///////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT71+XtKmke3b0/z6+f////////////////////////////////////////////////////jy7+bOws+gib5+X7dyT7dxTrdxTrl2U8SMcNu3pvHj3P37+v///////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT7x7W8+gienUyvv39f////////////////////////////////////////////////////37+vDj3Ny5qMaPdLp4VrdxTrdwTrdyT75+X86fh+TMv/bv6/7+/v///7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyTrp4V8qXfuTKvfjy7/////////////////////////////////////////////////////////n08enUytOplMGGaLl1UrdxTbdxTbl1U8OIa9aumunVyrh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUbdyT7l1U8WOct29rPTp5P79/f////////////////////////////////////////////////////79/fXt6OPJvM+gib+BYrhzUbdwTbdxTrp3Vrh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT7hzUMCEZdWsmO3c0/z5+P////////////////////////////////////////////////////////37+/Po4uHEtc2chL6AYbh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdzULdxT7x6WsyagePJvPbv6/7+/v////////////////////////////////////////////////////////z6+fLm4OLHubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT7l1U8OJbNixnu7e1vz59////////////////////////////////////////////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT7dyT7x8W8uZgOHEtvXr5v79/P///////////////////////////////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyT7hzUcCEZtKnkefRxvjx7v7+/v///////////////////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzULdyTrl3VcSLbtewnOvYzvn08v///v///////////////////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT7dyTrt5V8aPc9izoezZ0Pr08v/+/v///////////7h0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbdyT7dyT7t5WMaOc9exnurWzPjx7v79/bh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhzUbdyT7dyT7p4VsSKbtKmkLh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UbhyT7dxTrh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0Ubh0UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAC5dVMA37+wAOzZ0ADUqpYAu3pZAOHEtgDu3tYA+/j2ANevnADjybwA5Mm8APHj3AD+/fwAwIRlAPPo4gDbuagA6NPIANGkjgC4dFEA3r6uAOvYzgC5dVQA+PLuAPnz8QC7eVcA7d3UALx6WgDJlHoA1a6aAPv49wC+f2AAy5mAANizoAD+/f0A5c3AAMCEZgDBhGYAzp6GAOjSxgD27ekAt3NPALh0UgDFjnIAxo5yAOvYzwD48u8A4MKyAODDtQC7eVgAyJN4AO3d1QD79/UAvX5eAP38+wDlzcEAwINkAPLn4QDz5+EA9eznANCjjQC3c1AA3b2tALhzUADq180AxY1wAOvXzQD48e0A06iTALp4VgDHknYA7dzTAPr28wDIk3kA1a2ZAL19XADv4dkAy5h/AP38/AD+/PwA8ubfAMCDZQDNnYUA2relAMKIawC3ck4AuHNRAMWNcQC6eFcAx5J3APr29AD79vQAvX1dAPDh2gDXsZ0A/Pv6AP37+gC/gmMA5czAAPLm4ADCh2kA6NHGAPTr5gD16+YAt3JPAPfw7ADSp5IAundVAODBsgDs29IA7dvSAPr18gDVrJgAvHxbAO/g2ADKl34A/fv7AL+BYQDky74A5cu+APHl3gDNnIQA///+ANq2pADn0MQAwodqALZxTQDcu6oAt3FNAPfw7QDfwLAAundWAMeRdgDUq5YA+vXzALx8XADixrkAyZZ8AMqWfAD8+vkA17CcAP36+QC/gWIA8uXfANm1ogD///8AwYZoAPTq5QC3cU4A6dXLAMSLbgDq1csA9+/rALl2VADs2tEA+fTxAMeRdwDhxbcAvHtaAOLFtwDv39cA/Pn3ANewnQC+gGAA5Mq9APHk3QD+/v0AzZuDANm1owDBhWYAz6CJALZwTADcuqkAx5B1ANOqlQD59PIA+vTyALx7WwDJlXsA1q+bAPz5+ADjybsAvoBhAL+AYQD+/v4A2bShAP/+/gDmzsEAzp+HAPTp5ADbuacAtnBNAMOKbQDp1MoAuHRQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkJCgXQA+EhISEj6NbZCQkJCQZqxUEhISEhISEhISEhKQkJAHDwQoEhISEjwrjpCQkJCQXFZnEhISEhISEhISEpCQkJAMNiNnEhISEmeDOJCQkJCQjjFnEhISEhISEhISipCQkJCQS7E+PhISEmeDjpCQkJCQOiVVwRISEhISEhIDJ5CQkJCQQhxXKBISEmcqS5CQkJCQmrKCPBISEhISEmcxcZCQkJCQX3WRZxISEmdTFJCQkJCQjJ6NZxISEhISEmcNdXOQkJCQkE+pmCgSEme2CjWQkJCQuQaIVT4SEhISEigwoS2QkJCQkAcvI2cSEjwwp4WQkJCQkC16NGcSEphnEj4+iQa3kJCQkJCOO4JnEj4pJTmQkJCQkCFtHwBnCaxVPBJndAEzkJCQkJCzIlY+PhJnUzZfkJCQkJBZBVaQQqs3Zz4+AFFct5CQkJCQl1KNZz4oGIRmkJCQkJB5QpCQuY6tcGc+Z2A9mpCQkJCQtwtpsGc+Z7+jHZCQkJCQkJCQkDWZJVdnKCmJQTWQkJCQkHMCuzBUZ2olGQyQkJCQkJCQkJCgZHKYVFSdhDm5kJCQkJCzwHgYVJNbb46lkBAHkJCQkJCQWmEbmJNnJH5okJCQkJCQoJS7nX+TYCCkVyVGTZCQkJCQkIV1G5h9PkCcF5CQkJCQkIpsabWTkx4SZ0qEd6WQkJCQkJBHukxXqilFtJqQkJCQkJBOd1KVABISPmdguJK5kJCQkJCQB8CpcL4pWIcWkJCQkJCQeYB7EhISEj48kb06uZCQkJCQkF8GSVCTPlYTZreQkJCQkJASEhISEhI8PmMPZbmQkJCQkJAhvBOsFZOoi5+KkJCQkBISEhISEhISKD6Rj2IhkJCQkJCQkK8QEbWTGnh2aLeQEhISEhISEhISEjxnYG8GXpCQkJCQkJBODoGxMBJ8CD8SEhISEhISEhISEhI+Z4apJm6QkJCQkJCQkAcypytqmBISEhISEhISEhISEhISPlRqmwG8DJCQkJCQkJCQrix6EhISEhISEhISEhISEhISEhJnPjdDlm6QkJCQkJCQkJASEhISEhISEhISEhISEhISEhISPlRErA9cs5CQkJCQkBISEhISEhISEhISEhISEhISEhISEhJnKFsfLk+MkJCQEhISEhISEhISEhISEhISEhISEhISEhISPlQ+oqZrpAcSEhISEhISEhISEhISEhISEhISEhISEhISEhI+VD40SBISEhISEhISEhISEhISEhISEhISEhISEhISEhISEj5nEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAABAAAAAgAAAAAQAIAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAPbt6QDGkHQAzJqBAM+giQC/gmIAwohqAL1+XQDq180Ay5h/AOXNwADo08gA48m7AL6AYADs2dAA4cW2AMGGaAC3ck4A5Mu+AOrVywDly74Av4JjAOjRxgC9fl4AuHRRAODDtADAhGYAu3pZANu5pwD+/v0A2bWiANy7qgC3ck8AunhXAPr28wD9/PsA3b2tALh0UgDYs6AA9u7pAP7+/gD//v4A1KuWAM+hiQD38OwA9eznAPv29ADw4toA+PLvAPPo4gDOn4cA1q+cAPz49wD27uoAx5F1APTq5QDv4NgA6tbLAMiTeADDiWsA8OLbAMuZgAC7e1kAwYVmAO7e1gDOn4gAyZV7AMSLbgC5d1QA8eTeAL19XAC3c08A7+DZAOrWzADKl34A5cy/AMCDZADt3NQA6NLHAMiTeQDjyLoAuHVSAOvYzwDBhWcA4cS1ALZxTQDp1MoAxItvAL+BYgD///4A4sa4AMKHagC3c1AA17KeALhzUADgwrMAu3lYAOPIuwC5dVMA/Pn3ALdxTgD///8A+vXyANq2pAD9+/oA3bysAODCtAD79/UA27inANGkjQD+/f0A+fPwANSqlQD06eMA/Pn4ANewnQD37+sAzJyDAMqYfgDNnoYAyJR5AMOKbAD79/YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkMDkfXV8LZGRRVx8XFxcXImQ2A1AfBE1kKApSHxcXF3IrZC0eBlQMSm1kN3dbXRdjQUdkHA13HxpoM2QrMj0QTiRXDmJkLxsMF2w2ZCJVPGVZeGEqRFgnLmwgBRNxZHlYZDRrSxRoL2RnB3RFdkwiIyZkKHAlGQERamRxODEPKl1CU25kJ3BmVnUJIWRnPyUXRlA1T25kWDReSQgYAChkFxcXH2EBaTQoZC0SKQJcSBcXFxcXHxc6HTtnZBwsYG8XFxcXFxcXRh8WQEpzJ2RtFxcXFxcXFxcXXRBhWm8VABcXFxcXFxcXFxcXF0YQQz4XFxcXFxcXFxcXFxcXFxdGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
 </head>
+
 <body>
-<br>
-<h1>Rogers Resources Hub</h1>
-<h2>The Official Rogers Resources Site!</h2>
-<h4>Version: 1.0</h4>
-<div> 
-<style>
-h1 {text-align: center;}
-h2 {text-align: center;}
-h4 {text-align: center;}
-,
-::before,
-*::after {
-box-sizing: border-box;
-}
-:root {
---select-border: #777;
---select-focus: blue;
---select-arrow: var(--select-border);
-}
-select {
-display: block;
-margin: 0 auto;
-}
-select {
-width: 100%;
-min-width: 15ch;
-max-width: 30ch;
-border: 1px solid var(--select-border);
-border-radius: 0.25em;
-padding: 0.25em 0.5em;
-font-size: 1.25rem;
-cursor: pointer;
-line-height: 1.1;
-background-color: #F0F8FF;
-background-image: #F0F8FF;
-pointer-events: auto;
-}
-</style>
-<select id="select" oninput="select()">
-<option value="0">Select A Game...</option>
-<option value="1">Retro Bowl</option>
-<option value="5">Tetris</option>
-<option value="8">Stunt Cars</option>
-<option value="11">Drift Hunters</option>
-<option value="12">Burrito Bison</option>
-<option value="13">10 More Bullets</option>
-<option value="14">Madalin Stunt Cars 2</option>
-<option value="15">Launch Ball</option>
-</select>
-<br>
-<div style="width:100; padding-bottom:56.25%; position:relative;">
-<iframe id="myframe" style="position:absolute; top:0px; left:0px;
-width:100%; height:87%; border: none; overflow: hidden;"></iframe>
-</div>
-<script>
-function select() {
-if(document.getElementById('select').value === '0') {
-document.getElementById("myframe").src = atob('');
-}
-if(document.getElementById('select').value === '1') {
-document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/230188292910318641/files/rb1.html');
-}
-if(document.getElementById('select').value === 'asdf') {
-document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html');
-}
-if(document.getElementById('select').value === 'asdf') {
-document.getElementById("myframe").src = ('https://radonfungames.netlify.app/src/there-is-no-game/index.html');
-}
-if(document.getElementById('select').value === '5') {
-document.getElementById("myframe").src = ('https://www.lumpty.com/amusements/Games/Tetris/tetris.html');
-}
-if(document.getElementById('select').value === '8') {
-document.getElementById("myframe").src = ('https://radonfungames.netlify.app/src/madalin-stunt-cars-2/index.html');
-}
-if(document.getElementById('select').value === '11') {
-document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html');
-}
-if(document.getElementById('select').value === '12') {
-document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/607721921917323670/burrito-bison-ll.html');
-}
-if(document.getElementById('select').value === '13') {
-document.getElementById("myframe").src = ('https://advanced-channeler.02.gz-associates.com/?t=tam-10-more-bullets');
-}
-if(document.getElementById('select').value === '14') {
-document.getElementById("myframe").src = ('https://radonfungames.netlify.app/src/madalin-stunt-cars-2/index.html');
-}
-if(document.getElementById('select').value === '15') {
-document.getElementById("myframe").src = ('https://launchball.sciencemuseum.org.uk/');
-}
-if(document.getElementById('select').value === 'asdf') {
-document.getElementById("myframe").src = ('https://www.gstatic.com/atari/embeds/7925c5f8e01bacb9b4b0a3783ae0b867/intermediate-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.z9QjrzsHcOc.O%2Fd%3D1%2Frs%3DAHpOoo8359JQqZQ0dzCVJ5Ui3CZcERHEWA%2Fm%3D__features__&r=161253547');
-}
-}
-</script>
-</div>
-<script src="script.js"></script>
+  <br>
+  <h1>Rogers Resources Hub</h1>
+  <h2>The Official Rogers Resources Site!</h2>
+  <h4>Version 1.1</h4>
+    <button onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden'">Full screen (reload to reset)</button>
+  <div>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      h4 {
+        text-align: center;
+      }
+
+      ,
+      ::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      select {
+        display: block;
+        margin: 0 auto;
+      }
+
+      select {
+        width: 100%;
+        min-width: 15ch;
+        max-width: 30ch;
+        border: 1px solid #777;
+        border-radius: 0.25em;
+        padding: 0.25em 0.5em;
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1.1;
+        background-color: #F0F8FF;
+        background-image: #F0F8FF;
+        pointer-events: auto;
+      }
+    </style>
+    <select id="select" oninput="select()">
+      <option value="0">Select A Game...</option>
+      <option value="1">Retro Bowl</option>
+      <option value="2">Fall Boys</option>
+      <option value="11">Drift Hunters</option>
+      <option value="12">Burrito Bison</option>
+      <option value="13">10 More Bullets</option>
+      <option value="15">Launch Ball</option>
+    </select>
+    <br>
+      <iframe id="myframe" style="position: absolute; top: 275px; left: 0; width: 100%; height: 200px; min-height: calc(100% - 275px); border: 0; overflow: hidden;"></iframe>
+    <script>
+      function select() {
+        if (document.getElementById('select').value === '0') {
+          document.getElementById("myframe").src = '';
+        }
+        if (document.getElementById('select').value === '1') {
+          document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/230188292910318641/files/rb1.html');
+        }
+        if (document.getElementById('select').value === '2') {
+          document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html');
+        }
+        if (document.getElementById('select').value === '11') {
+          document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html');
+        }
+        if (document.getElementById('select').value === '12') {
+          document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/607721921917323670/burrito-bison-ll.html');
+        }
+        if (document.getElementById('select').value === '13') {
+          document.getElementById("myframe").src = ('https://advanced-channeler.02.gz-associates.com/?t=tam-10-more-bullets');
+        }
+        if (document.getElementById('select').value === '15') {
+          document.getElementById("myframe").src = ('https://launchball.sciencemuseum.org.uk/');
+        }
+        if (document.getElementById('select').value === 'asdf') {
+          document.getElementById("myframe").src = ('https://www.gstatic.com/atari/embeds/7925c5f8e01bacb9b4b0a3783ae0b867/intermediate-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.z9QjrzsHcOc.O%2Fd%3D1%2Frs%3DAHpOoo8359JQqZQ0dzCVJ5Ui3CZcERHEWA%2Fm%3D__features__&r=161253547');
+        }
+      }
+    </script>
+  </div>
 </body>
+
 </html>
