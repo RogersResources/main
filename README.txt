@@ -1,9 +1,9 @@
 Want to update your version?
 Visit our github!
-https://github.com/RogersResourcers/main
+https://github.com/RogersResources/main
 
 How to download:
-	step 1) open our github page. (https://github.com/RogersResourcers/main)
+	step 1) open our github page at https://github.com/RogersResources/main
 	step 2) press "code"
 	step 3) press "Download ZIP"
 	step 4) Extract the ZIP (you may need to right-click)
