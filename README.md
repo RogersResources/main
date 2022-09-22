@@ -19,3 +19,5 @@ The "main-main" folder will contain all the games you could wish for.
 
 
 To find a game, simply go to your **files and search the game up!**
+
+**We will be working on a better search interface. It should be ready soon.**
