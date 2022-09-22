@@ -11,3 +11,5 @@ How to download:
 	
 	That should make a "RogersResources" folder or a "main-main" folder in your folder that you made. 
 	The "main-main" folder will contain all the games you could wish for.
+
+To find a game, simply go to your files and search the game up!
