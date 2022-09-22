@@ -7,9 +7,8 @@ How to download:
 	2) Press "code"
 	3) Press "Download ZIP"
 	4) Extract the ZIP (you may need to right-click)
-	5) Rename the "Resouces" folder from the ZIP to something else, like "ELAR Notes" of "Coding Projects"
 	
-	That should make a "RogersResources" folder or a "main-main" folder in your folder that you made. 
+	That should make a "main-main" folder. 
 	The "main-main" folder will contain all the games you could wish for.
 
 To find a game, simply go to your files and search the game up!
