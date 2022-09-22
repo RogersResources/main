@@ -12,7 +12,7 @@ How to download:
 
 4) Extract the ZIP (you may need to right-click)
 
-5) Rename the "Resouces" folder from the ZIP to something else, like "ELAR Notes" of "Coding Projects"
+5) Rename the "main-main" folder from the ZIP to something else, like "ELAR Notes" of "Coding Projects"
 
 That should make a "RogersResources" folder or a "main-main" folder in your folder that you made.
 The "main-main" folder will contain all the games you could wish for.
