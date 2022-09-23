@@ -14,127 +14,60 @@
   <div class="htmlcode">
     <h1 class="text">Rogers Resources Hub</h1>
     <h2 class="text">The Official Rogers Resources Site!</h2>
-    <button class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden'">Full screen (reload to reset)</button>
+    <button class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
+    <br>
+    <button class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen, retro bowl will enlargen, but wont fullscreen using this method.');">Make Game Cover Whole Tab</button>
   <br>
   </div>
   <div>
-    <style>
-      .htmlcode {
-        text-align: center;
-      }
-      .fullscreenbutton {
-        background:linear-gradient(to bottom, #6396a8 5%, #408c99 100%);
-        background-color:#6396a8;
-        border-radius:42px;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Verdana;
-        font-size:10px;
-        padding:16px 31px;
-        text-decoration:none;
-        text-shadow:2px 2px 1px #195e75;
-      }
-      .fullscreenbutton:hover {
-        background:linear-gradient(to bottom, #408c99 5%, #6396a8 100%);
-        background-color:#408c99;
-      }
-      .fullscreenbutton:active {
-        position:relative;
-        top:1px;
-      }
-      .htmlcode {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-        font-size: 17px;
-        letter-spacing: 0px;
-        word-spacing: 6px;
-        color: #9743FF;
-        font-weight: 700;
-        text-decoration: none solid rgb(68, 68, 68);
-        font-style: normal;
-        font-variant: normal;
-        text-transform: none;
-      }
-      ,
-      ::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      .select {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 15px;
-        width: 100%;
-}    .select select {
-        font-family: 'Arial';
-        display: inline-block;
-        width: 100%;
-        cursor: pointer;
-        padding: 10px 10px;
-        outline: 0;
-        border: 0px solid #000000;
-        border-radius: 100px;
-        background: #c08dff;
-        color: #000000;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
-      .select select::-ms-expand {
-        display: none;
-        }
-      .select select:hover,
-      .select select:focus {
-        color: #373737;
-        background: #e9d8ff;
-        }
-      .select select:disabled {
-        opacity: 0.5;
-        pointer-events: none;
-        }
-      .select_arrow {
-        position: absolute;
-        top: 15px;
-            right: 15px;
-        width: 6px;
-        height: 6px;
-        border: solid #7b7b7b;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-}
-      .select select:hover ~ .select_arrow,
-      .select select:focus ~ .select_arrow {
-        border-color: #000000;
-}
-      .select select:disabled ~ .select_arrow {
-        border-top-color: #cccccc;
-}
-    </style>
     <br>
-    <div class="select">
+    <div class="select", style="text-align:center">
       <select id="select" oninput="select()">
         <option value="0">Select A Game...</option>
         <option value="1">Retro Bowl</option>
         <option value="2">Fall Boys</option>
-        <option value="11">Drift Hunters</option>
-        <option value="12">Burrito Bison</option>
-        <option value="13">10 More Bullets</option>
-        <option value="15">Launch Ball</option>
         <option value="3">Holy Unblocker</option>
+        <option value="4">Drift Hunters</option>
+        <option value="5">Burrito Bison</option>
+        <option value="6">10 More Bullets</option>
+        <option value="7">Launch Ball</option>
+        <option value="8">Asteroids</option>
+        <option value="9">Push And Fork</option>
+        <option value="10">The Pond</option>
+        <option value="11">Chromebook Games</option>
+        <option value="12">Vitual Vacation</option>
+        <option value="13">Avabranch</option>
+        <option value="14">Ludum</option>
+        <option value="15">Js13k Games</option>
+        <option value="16">Sorades 13k</option>
+        <option value="17">Hexa Battle</option>
+        <option value="18">Branching Out</option>
+        <option value="19">Shape Experiment</option>
+        <option value="20">Zolmeister</option>
+        <option value="21">Binb</option>
+        <option value="22">Stendhal</option>
+        <option value="23">WebMSX</option>
+        <option value="24">Javatari</option>
     </select>
-    <div class="select_arrow">
-    </div>
 </div>
     <br>
       <iframe id="myframe" style="position: absolute; top: 275px; left: 0; width: 100%; height: 200px; min-height: calc(100% - 275px); border: 0; overflow: hidden;"></iframe>
+      <script>
+        var elem = document.getElementById("myframe");
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+          }
+        }
+        </script>
     <script>
       function select() {
         if (document.getElementById('select').value === '0') {
-          document.getElementById("myframe").src = '';
+          document.getElementById("myframe").src = ('');
         }
         if (document.getElementById('select').value === '1') {
           document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/230188292910318641/files/rb1.html');
@@ -145,24 +78,162 @@
         if(document.getElementById('select').value === '3') {
 document.getElementById("myframe").src = atob('aHR0cHM6Ly96bHhybHIub3JnLw==');
 }
-        if (document.getElementById('select').value === '11') {
+        if (document.getElementById('select').value === '4') {
           document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html');
         }
-        if (document.getElementById('select').value === '12') {
+        if (document.getElementById('select').value === '5') {
           document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/607721921917323670/burrito-bison-ll.html');
         }
-        if (document.getElementById('select').value === '13') {
+        if (document.getElementById('select').value === '6') {
           document.getElementById("myframe").src = ('https://advanced-channeler.02.gz-associates.com/?t=tam-10-more-bullets');
         }
-        if (document.getElementById('select').value === '15') {
+        if (document.getElementById('select').value === '7') {
           document.getElementById("myframe").src = ('https://launchball.sciencemuseum.org.uk/');
         }
-        if (document.getElementById('select').value === 'asdf') {
-          document.getElementById("myframe").src = ('https://www.gstatic.com/atari/embeds/7925c5f8e01bacb9b4b0a3783ae0b867/intermediate-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.z9QjrzsHcOc.O%2Fd%3D1%2Frs%3DAHpOoo8359JQqZQ0dzCVJ5Ui3CZcERHEWA%2Fm%3D__features__&r=161253547');
+        if (document.getElementById('select').value === '8') {
+          document.getElementById("myframe").src = ('http://www.dougmcinnes.com/html-5-asteroids');
+        }
+        if (document.getElementById('select').value === '9') {
+          document.getElementById("myframe").src = ('http://gelisam.com/octocarina/');
+        }
+        if (document.getElementById('select').value === '10') {
+          document.getElementById("myframe").src = ('https://thepond.zolmeister.com/');
+        }
+        if (document.getElementById('select').value === '11') {
+          document.getElementById("myframe").src = ('https://g.eags.us/');
+        }
+        if (document.getElementById('select').value === '12') {
+          document.getElementById("myframe").src = ('https://virtualvacation.us/');
+        }
+        if (document.getElementById('select').value === '13') {
+          document.getElementById("myframe").src = ('https://avabranch.zolmeister.com/');
+        }
+        if (document.getElementById('select').value === '14') {
+          document.getElementById("myframe").src = ('http://omarshehata.me/html/ludum/');
+        }
+        if (document.getElementById('select').value === '15') {
+          document.getElementById("myframe").src = ('https://js13kgames.com/entries/2022');
+        }
+        if (document.getElementById('select').value === '16') {
+          document.getElementById("myframe").src = ('http://maettig.com/code/canvas/starship-sorades-13k/');
+        }
+        if (document.getElementById('select').value === '17') {
+          document.getElementById("myframe").src = ('http://giacomotag.io/hb/');
+        }
+        if (document.getElementById('select').value === '18') {
+          document.getElementById("myframe").src = ('http://henryhoffman.com/branchingout/');
+        }
+        if (document.getElementById('select').value === '19') {
+          document.getElementById("myframe").src = ('https://shapex.org/');
+        }
+        if (document.getElementById('select').value === '20') {
+          document.getElementById("myframe").src = ('https://zop.zolmeister.com/');
+        }
+        if (document.getElementById('select').value === '21') {
+          document.getElementById("myframe").src = ('https://binb.co/');
+        }
+        if (document.getElementById('select').value === '22') {
+          document.getElementById("myframe").src = ('https://stendhalgame.org/');
+        }
+        if (document.getElementById('select').value === '23') {
+          document.getElementById("myframe").src = ('https://webmsx.org/');
+        }
+        if (document.getElementById('select').value === '24') {
+          document.getElementById("myframe").src = ('https://javatari.org/');
         }
       }
     </script>
   </div>
+  <style>
+    body {
+      background: rgb(32,36,36);
+      background: linear-gradient(0deg, rgba(32,36,36,1) 0%, rgba(144,165,255,1) 50%, rgba(92,218,238,1) 100%);
+    }
+    .htmlcode {
+      text-align: center;
+    }
+    .select {
+      text-align: center;
+    }
+    select {
+      text-align: center;
+    }
+    .fullscreenbutton {border-radius: 100px;}
+    .fullscreenbutton {
+      opacity: 0.653623432;
+      transition-duration: 0.4s;
+      background-color: #c08dff;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}
+
+
+    .fullscreenbutton:hover {
+      background-color: #9743FF;
+      color: white;
+}
+    .htmlcode {
+      
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 17px;
+      letter-spacing: 0px;
+      word-spacing: 6px;
+      color: #9743FF;
+      font-weight: 700;
+      text-decoration: none solid rgb(68, 68, 68);
+      font-style: normal;
+      font-variant: normal;
+      text-transform: none;
+    }
+    ::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    .select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+  
+}    .select select {
+      transition-duration: 0.4s;
+      font-family: 'Arial';
+      display: inline-block;
+      width: 100%;
+      cursor: pointer;
+      padding: 10px 15px;
+      outline: 0;
+      border: 0px hidden #000000;
+      border-radius: 100px;
+      background: #c08dff;
+      opacity: 0.653623432;
+      color: #000000;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+      .select select::-ms-expand {
+          display: none;
+      }
+      .select select:hover,
+      .select select:focus {
+          color: #ffffff;
+          background: #9743ff;
+      }
+      .select select:disabled {
+          opacity: 0.5;
+          pointer-events: none;
+      }
+body {
+background-color: #330033;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+  </style>
 </body>
 
 </html>
