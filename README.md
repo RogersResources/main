@@ -14,7 +14,7 @@ How to download:
 
 5) Rename the `"main-main"` folder from the ZIP to something else, like `"ELAR Notes"` of `"Coding Projects"`
 
-That should make a `"main-main"` folder in your folder that you made.
-The "main-main" folder will contain all the games you could wish for.
+Then you have your games folder .
+The folder will contain all the games you could wish for.
 
-To find a game, simply go to your **files and search the game up!**
+To find a game, simply go to your **files and look around for the game!**
