@@ -6,59 +6,117 @@
   <meta name="viewport" content="width=device-width">
   <title>Login - Powered by Skyward</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/x-icon" href="https://skyward.iscorp.com/favicon.ico">
-</head>
+  <link rel="icon" type="image/x-icon" href="https://www.skyward.com/skyicon.ico">
+  </head>
 
 <body>
-  <div id="other">
+  <br>
+  <div class="htmlcode">
+    <h1 class="text">Rogers Resources Hub</h1>
+    <h2 class="text">The Official Rogers Resources Site!</h2>
+    <button class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden'">Full screen (reload to reset)</button>
+  <br>
+  </div>
+  <div>
+    <style>
+      .htmlcode {
+        text-align: center;
+      }
+      .fullscreenbutton {
+        background:linear-gradient(to bottom, #6396a8 5%, #408c99 100%);
+        background-color:#6396a8;
+        border-radius:42px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Verdana;
+        font-size:10px;
+        padding:16px 31px;
+        text-decoration:none;
+        text-shadow:2px 2px 1px #195e75;
+      }
+      .fullscreenbutton:hover {
+        background:linear-gradient(to bottom, #408c99 5%, #6396a8 100%);
+        background-color:#408c99;
+      }
+      .fullscreenbutton:active {
+        position:relative;
+        top:1px;
+      }
+      .htmlcode {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 17px;
+        letter-spacing: 0px;
+        word-spacing: 6px;
+        color: #9743FF;
+        font-weight: 700;
+        text-decoration: none solid rgb(68, 68, 68);
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+      }
+      ,
+      ::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      .select {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 100%;
+}    .select select {
+        font-family: 'Arial';
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 10px;
+        outline: 0;
+        border: 0px solid #000000;
+        border-radius: 100px;
+        background: #c08dff;
+        color: #000000;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+      .select select::-ms-expand {
+        display: none;
+        }
+      .select select:hover,
+      .select select:focus {
+        color: #373737;
+        background: #e9d8ff;
+        }
+      .select select:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        }
+      .select_arrow {
+        position: absolute;
+        top: 15px;
+            right: 15px;
+        width: 6px;
+        height: 6px;
+        border: solid #7b7b7b;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+}
+      .select select:hover ~ .select_arrow,
+      .select select:focus ~ .select_arrow {
+        border-color: #000000;
+}
+      .select select:disabled ~ .select_arrow {
+        border-top-color: #cccccc;
+}
+    </style>
     <br>
-    <h1>Rogers Resources Hub</h1>
-    <h2>The Official Rogers Resources Site!</h2>
-    <button onclick="document.getElementById('other').remove(); document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden'">Full screen (reload to reset)</button>
-    <div>
-      <style>
-        h1 {
-          text-align: center;
-        }
-
-        h2 {
-          text-align: center;
-        }
-
-        h4 {
-          text-align: center;
-        }
-
-        button {
-          text-align: center;
-        }
-
-        ::before,
-        *::after {
-          box-sizing: border-box;
-        }
-
-        select {
-          display: block;
-          margin: 0 auto;
-        }
-
-        select {
-          width: 100%;
-          min-width: 15ch;
-          max-width: 30ch;
-          border: 1px solid #777;
-          border-radius: 0.25em;
-          padding: 0.25em 0.5em;
-          font-size: 1.25rem;
-          cursor: pointer;
-          line-height: 1.1;
-          background-color: #F0F8FF;
-          background-image: #F0F8FF;
-          pointer-events: auto;
-        }
-      </style>
-      <select id="select" oninput="select()">
+    <div class="select">
+      <select class="select" oninput="select()">
         <option value="0">Select A Game...</option>
         <option value="1">Retro Bowl</option>
         <option value="2">Fall Boys</option>
@@ -67,42 +125,44 @@
         <option value="13">10 More Bullets</option>
         <option value="15">Launch Ball</option>
         <option value="3">Holy Unblocker</option>
-      </select>
-      <br>
-      <script>
-        function select() {
-          if (document.getElementById('select').value === '0') {
-            document.getElementById("myframe").src = '';
-          }
-          if (document.getElementById('select').value === '1') {
-            document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/230188292910318641/files/rb1.html');
-          }
-          if (document.getElementById('select').value === '2') {
-            document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html');
-          }
-          if (document.getElementById('select').value === '3') {
-            document.getElementById("myframe").src = atob('aHR0cHM6Ly96bHhybHIub3JnLw==');
-          }
-          if (document.getElementById('select').value === '11') {
-            document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html');
-          }
-          if (document.getElementById('select').value === '12') {
-            document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/607721921917323670/burrito-bison-ll.html');
-          }
-          if (document.getElementById('select').value === '13') {
-            document.getElementById("myframe").src = ('https://advanced-channeler.02.gz-associates.com/?t=tam-10-more-bullets');
-          }
-          if (document.getElementById('select').value === '15') {
-            document.getElementById("myframe").src = ('https://launchball.sciencemuseum.org.uk/');
-          }
-          if (document.getElementById('select').value === 'asdf') {
-            document.getElementById("myframe").src = ('https://www.gstatic.com/atari/embeds/7925c5f8e01bacb9b4b0a3783ae0b867/intermediate-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.z9QjrzsHcOc.O%2Fd%3D1%2Frs%3DAHpOoo8359JQqZQ0dzCVJ5Ui3CZcERHEWA%2Fm%3D__features__&r=161253547');
-          }
-        }
-      </script>
+    </select>
+    <div class="select_arrow">
     </div>
+</div>
+    <br>
+      <iframe id="myframe" style="position: absolute; top: 275px; left: 0; width: 100%; height: 200px; min-height: calc(100% - 275px); border: 0; overflow: hidden;"></iframe>
+    <script>
+      function select() {
+        if (document.getElementById('select').value === '0') {
+          document.getElementById("myframe").src = '';
+        }
+        if (document.getElementById('select').value === '1') {
+          document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/230188292910318641/files/rb1.html');
+        }
+        if (document.getElementById('select').value === '2') {
+          document.getElementById("myframe").src = ('https://debbiewatermanphd.com/uploads/5/5/6/7/5567194/custom_themes/790846461828095114/fall-boys.html');
+        }
+        if(document.getElementById('select').value === '3') {
+document.getElementById("myframe").src = atob('aHR0cHM6Ly96bHhybHIub3JnLw==');
+}
+        if (document.getElementById('select').value === '11') {
+          document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html');
+        }
+        if (document.getElementById('select').value === '12') {
+          document.getElementById("myframe").src = ('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/607721921917323670/burrito-bison-ll.html');
+        }
+        if (document.getElementById('select').value === '13') {
+          document.getElementById("myframe").src = ('https://advanced-channeler.02.gz-associates.com/?t=tam-10-more-bullets');
+        }
+        if (document.getElementById('select').value === '15') {
+          document.getElementById("myframe").src = ('https://launchball.sciencemuseum.org.uk/');
+        }
+        if (document.getElementById('select').value === 'asdf') {
+          document.getElementById("myframe").src = ('https://www.gstatic.com/atari/embeds/7925c5f8e01bacb9b4b0a3783ae0b867/intermediate-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.z9QjrzsHcOc.O%2Fd%3D1%2Frs%3DAHpOoo8359JQqZQ0dzCVJ5Ui3CZcERHEWA%2Fm%3D__features__&r=161253547');
+        }
+      }
+    </script>
   </div>
-  <iframe id="myframe" style="position: absolute; top: 275px; left: 0; width: 100%; height: 200px; min-height: calc(100% - 275px); border: 0; overflow: hidden;"></iframe>
 </body>
 
 </html>
