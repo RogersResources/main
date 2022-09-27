@@ -26,8 +26,4 @@ Go to [Here](https://github.com/RogersResources/main)
 >
 >10) Then double-click the GAMESITE file and enjoy :)
 
-
-![image](https://user-images.githubusercontent.com/114105250/192406446-3dc62d0b-3631-4b8e-b52b-1c5094fab3e2.png)
-![image](https://user-images.githubusercontent.com/114105250/192406488-88c205f0-261f-4269-93df-e71e0301bc09.png)
-
 <img width="615" alt="rogersresources" src="https://user-images.githubusercontent.com/114105250/192408377-bda6d495-9811-48e7-acd0-5bc3c530e865.png">
