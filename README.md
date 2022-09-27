@@ -1,4 +1,4 @@
-***Want to update your version?***
+**Want to update your version?**
 
 Go to [Here](https://github.com/RogersResources/main)
 
