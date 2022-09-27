@@ -1,8 +1,10 @@
-   **Want to update your version?**
+#Want to update your version?
 
-Go to https://github.com/RogersResources/main
+##Go to https://github.com/RogersResources/main
 
-How to download:
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
+
+**DOWNLOAD TUTORIAL:**
 
 1) Open our github page at "https://github.com/RogersResources/main"
 
