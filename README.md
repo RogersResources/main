@@ -4,7 +4,7 @@ Go to [Here](https://github.com/RogersResources/main)
 
 ***~~=======================================================~~***
 
-**DOWNLOAD TUTORIAL:**
+**DOWNLOAD TUTORIAL:** 
 
 >1) Open our github page located [Here](https://github.com/RogersResources/main)
 >
