@@ -6,7 +6,7 @@ Go to [Here](https://github.com/RogersResources/main)
 
 **Experimental Web Versions!**
 
-[Coming Soon!]()
+[Coming Soon!](https://github.com/RogersResources/main)
 
 ***~~=======================================================~~***
 
