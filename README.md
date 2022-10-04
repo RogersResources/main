@@ -6,7 +6,7 @@ Go to [Here](https://github.com/RogersResources/main)
 
 **Experimental Web Versions!**
 
-[Link One (Click Here)](https://cdpn.io/pen/debug/qBYKroX?authentication_hash=vWMRwoxvGvQr)
+[Coming Soon!]()
 
 ***~~=======================================================~~***
 
