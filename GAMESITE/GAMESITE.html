@@ -27,32 +27,36 @@
     <div class="select", style="text-align:center">
       <select id="select" oninput="select()">
         <option value="0">Select A Game...</option>
-        <option value="1">Retro Bowl</option>
-        <option value="2">Fall Boys</option>
-        <option value="3">Holy Unblocker</option>
-        <option value="4">Drift Hunters</option>
-        <option value="5">Burrito Bison</option>
-        <option value="6">10 More Bullets</option>
-        <option value="7">Launch Ball</option>
-        <option value="8">Asteroids</option>
-        <option value="9">Push And Fork</option>
-        <option value="10">The Pond</option>
-        <option value="11">Vitual Vacation</option>
-        <option value="12">Avabranch</option>
-        <option value="13">Ludum</option>
-        <option value="14">Js13k Games</option>
-        <option value="15">Sorades 13k</option>
-        <option value="16">Hexa Battle</option>
-        <option value="17">Branching Out</option>
-        <option value="18">Shape Experiment</option>
-        <option value="19">Zolmeister</option>
-        <option value="20">Binb</option>
-        <option value="21">WebMSX</option>
-        <option value="22">Javatari</option>
-        <option value="23">Google Baseball</option>
-        <option value="24">Magic Poser</option>
-        <option value="25">Spent</option>
+        <option value="1">Try-A-Link!</option>
+        <option value="2">Retro Bowl</option>
+        <option value="3">Fall Boys</option>
+        <option value="4">Holy Unblocker</option>
+        <option value="5">Drift Hunters</option>
+        <option value="6">Burrito Bison</option>
+        <option value="7">10 More Bullets</option>
+        <option value="8">Launch Ball</option>
+        <option value="9">Asteroids</option>
+        <option value="10">Push And Fork</option>
+        <option value="11">The Pond</option>
+        <option value="12">Vitual Vacation</option>
+        <option value="13">Avabranch</option>
+        <option value="14">Ludum</option>
+        <option value="15">Js13k Games</option>
+        <option value="16">Sorades 13k</option>
+        <option value="17">Hexa Battle</option>
+        <option value="18">Branching Out</option>
+        <option value="19">Shape Experiment</option>
+        <option value="20">Zolmeister</option>
+        <option value="21">Binb</option>
+        <option value="22">WebMSX</option>
+        <option value="23">Javatari</option>
+        <option value="24">Google Baseball</option>
+        <option value="25">Magic Poser</option>
+        <option value="26">Spent</option>
       </select>
+      <br>
+      <br>
+      <input type="text" class="input" id="case" name="myText" style="visibility:hidden" placeholder="Type a link here...">
 </div>
 <br>
       <iframe id="myframe" style="position: relative; width: 100%; height: 1000px; border: 0; overflow: hidden;"></iframe>
@@ -74,81 +78,99 @@
           document.getElementById("myframe").src = ('');
         }
         if (document.getElementById('select').value === '1') {
-          document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy8yMzAxODgyOTI5MTAzMTg2NDEvZmlsZXMvcmIxLmh0bWw=');
+          document.getElementById("case").style.visibility = 'visible';
+          document.getElementById('case').value = ''
+        }
+        if (document.getElementById('select').value !== '1') {
+          document.getElementById("case").style.visibility = 'hidden';
         }
         if (document.getElementById('select').value === '2') {
+          document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy8yMzAxODgyOTI5MTAzMTg2NDEvZmlsZXMvcmIxLmh0bWw=');
+        }
+        if (document.getElementById('select').value === '3') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy83OTA4NDY0NjE4MjgwOTUxMTQvZmFsbC1ib3lzLmh0bWw=');
         }
-        if(document.getElementById('select').value === '3') {
+        if(document.getElementById('select').value === '4') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly91eHZ2eWthZi5vcmcv');
         }
-        if (document.getElementById('select').value === '4') {
+        if (document.getElementById('select').value === '5') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly96YXlhcnV6b3N0cmVldG9yZ2FuLmNvbS91cGxvYWRzLzUvNS82LzcvNTU2NzE5NC9jdXN0b21fdGhlbWVzLzEzNjczNDkxNDQwMzIzMjA4MS9kcmlmdF9odW50ZXIuaHRtbA==');
         }
-        if (document.getElementById('select').value === '5') {
+        if (document.getElementById('select').value === '6') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly96YXlhcnV6b3N0cmVldG9yZ2FuLmNvbS91cGxvYWRzLzUvNS82LzcvNTU2NzE5NC9jdXN0b21fdGhlbWVzLzYwNzcyMTkyMTkxNzMyMzY3MC9idXJyaXRvLWJpc29uLWxsLmh0bWw=');
         }
-        if (document.getElementById('select').value === '6') {
+        if (document.getElementById('select').value === '7') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9hZHZhbmNlZC1jaGFubmVsZXIuMDIuZ3otYXNzb2NpYXRlcy5jb20vP3Q9dGFtLTEwLW1vcmUtYnVsbGV0cw==');
         }
-        if (document.getElementById('select').value === '7') {
+        if (document.getElementById('select').value === '8') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9sYXVuY2hiYWxsLnNjaWVuY2VtdXNldW0ub3JnLnVrLw==');
         }
-        if (document.getElementById('select').value === '8') {
+        if (document.getElementById('select').value === '9') {
           document.getElementById("myframe").src = atob('aHR0cDovL3d3dy5kb3VnbWNpbm5lcy5jb20vaHRtbC01LWFzdGVyb2lkcw==');
         }
-        if (document.getElementById('select').value === '9') {
+        if (document.getElementById('select').value === '10') {
           document.getElementById("myframe").src = atob('aHR0cDovL2dlbGlzYW0uY29tL29jdG9jYXJpbmEv');
         }
-        if (document.getElementById('select').value === '10') {
+        if (document.getElementById('select').value === '11') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly90aGVwb25kLnpvbG1laXN0ZXIuY29tLw==');
         }
-        if (document.getElementById('select').value === '11') {
+        if (document.getElementById('select').value === '12') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly92aXJ0dWFsdmFjYXRpb24udXMv');
         }
-        if (document.getElementById('select').value === '12') {
+        if (document.getElementById('select').value === '13') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9hdmFicmFuY2guem9sbWVpc3Rlci5jb20v');
         }
-        if (document.getElementById('select').value === '13') {
+        if (document.getElementById('select').value === '14') {
           document.getElementById("myframe").src = atob('aHR0cDovL29tYXJzaGVoYXRhLm1lL2h0bWwvbHVkdW0v');
         }
-        if (document.getElementById('select').value === '14') {
+        if (document.getElementById('select').value === '15') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9qczEza2dhbWVzLmNvbS9lbnRyaWVzLzIwMjI=');
         }
-        if (document.getElementById('select').value === '15') {
+        if (document.getElementById('select').value === '16') {
           document.getElementById("myframe").src = atob('aHR0cDovL21hZXR0aWcuY29tL2NvZGUvY2FudmFzL3N0YXJzaGlwLXNvcmFkZXMtMTNrLw==');
         }
-        if (document.getElementById('select').value === '16') {
+        if (document.getElementById('select').value === '17') {
           document.getElementById("myframe").src = atob('aHR0cDovL2dpYWNvbW90YWcuaW8vaGIv');
         }
-        if (document.getElementById('select').value === '17') {
+        if (document.getElementById('select').value === '18') {
           document.getElementById("myframe").src = atob('aHR0cDovL2hlbnJ5aG9mZm1hbi5jb20vYnJhbmNoaW5nb3V0Lw==');
         }
-        if (document.getElementById('select').value === '18') {
+        if (document.getElementById('select').value === '19') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9zaGFwZXgub3JnLw==');
         }
-        if (document.getElementById('select').value === '19') {
+        if (document.getElementById('select').value === '20') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly96b3Auem9sbWVpc3Rlci5jb20v');
         }
-        if (document.getElementById('select').value === '20') {
+        if (document.getElementById('select').value === '21') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9iaW5iLmNvLw==');
         }
-        if (document.getElementById('select').value === '21') {
+        if (document.getElementById('select').value === '22') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93ZWJtc3gub3JnLw==');
         }
-        if (document.getElementById('select').value === '22') {
+        if (document.getElementById('select').value === '23') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9qYXZhdGFyaS5vcmcv');
         }
-        if (document.getElementById('select').value === '23') {
+        if (document.getElementById('select').value === '24') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9sb2dvcy8yMDE5L2p1bHk0dGgxOS9yMy9qdWx5NHRoMTkuaHRtbA==');
         }
-        if (document.getElementById('select').value === '24') {
+        if (document.getElementById('select').value === '25') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93ZWJhcHAubWFnaWNwb3Nlci5jb20v');
         }
-        if (document.getElementById('select').value === '25') {
+        if (document.getElementById('select').value === '26') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9wbGF5c3BlbnQub3JnL2h0bWwv');
         }
       }
+var wage = document.getElementById("case");
+wage.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        validate(e);
+    }
+});
+
+function validate(e) {
+    alert('coming soon');
+}
+
     </script>
   </div>
   <style>
@@ -258,6 +280,26 @@
 body {
 background-color: #330033;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+::placeholder {
+  color: black;
+}
+.input {
+     padding: 8px;
+     font-size: 17px;
+     border-width: 1px;
+     background-color: #c08dff;
+     color: #000000;
+     border-style: solid;
+     border-radius: 50px;
+     opacity: 0.653623432;
+     box-shadow: 0px 0px 0px rgba(66,66,66,.100);
+     text-shadow: 0px 0px 5px rgba(66,66,66,.0);
+     textarea: black
+}
+ .input:focus {
+     outline:none;
+     color: black;
 }
   </style>
 </body>
