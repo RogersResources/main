@@ -56,7 +56,7 @@
       </select>
       <br>
       <br>
-      <input type="text" class="input" id="case" name="myText" style="visibility:hidden" placeholder="Type a link here...">
+      <input type="text" class="input" id="case" name="myText" style="visibility:hidden" placeholder="Type here...">
 </div>
 <br>
       <iframe id="myframe" style="position: relative; width: 100%; height: 1000px; border: 0; overflow: hidden;"></iframe>
@@ -169,6 +169,7 @@ wage.addEventListener("keydown", function (e) {
 
 function validate(e) {
     alert('coming soon');
+    document.getElementById("myframe").src =(document.getElementById('case').value);
 }
 
     </script>
