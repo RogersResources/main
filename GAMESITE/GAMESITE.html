@@ -16,9 +16,14 @@
     <br>
     <button class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
     <br>
-    <button class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen, retro bowl will enlargen, but wont fullscreen using this method.');">Make Game Cover Whole Tab</button>
+    <button class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen, retro bowl will enlargen, but wont fullscreen using this method.');">Make Screen Cover Tab</button>
     <br>
     <button class="fullscreenbutton"><a href="data/other.html">Other Games</a></button>
+    <h3 class="text">Hazard Hotkeys:</h3>
+    <h4 class="text">Esc Is Portal</h4>
+    <h4 class="text">` Or ~ Is Google Classroom</h4>
+    <h4 class="text">Tab Is Skyward</h4>
+    <h4 class="text">Search Is Gmail</h4>
     <br>
   </div>
   <div>
@@ -186,6 +191,21 @@ btn.addEventListener('click', function handleClick() {
   const end = input.value.length;
   input.setSelectionRange(end, end);
   input.focus();
+});
+
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 192) {
+        location.href = "https://classroom.google.com/h";
+    }
+    else if(event.keyCode == 9) {
+        location.href = "https://skyward.iscorp.com/scripts/wsisa.dll/WService=wseduprospertx/seplog01.w";
+    }
+    else if(event.keyCode == 91) {
+        location.href = "https://mail.google.com/mail/u/0/#inbox";
+    }
+    else if(event.keyCode == 27) {
+        location.href = "https://portal.prosper-isd.net/ui/dashboard";
+    }
 });
     </script>
   </div>
