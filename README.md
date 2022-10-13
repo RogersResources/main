@@ -10,6 +10,12 @@ Go to [Here](https://github.com/RogersResources/main)
 
 ***~~=======================================================~~***
 
+**Discord Server!**
+
+[Coming Soon!](https://github.com/RogersResources/main)
+
+***~~=======================================================~~***
+
 **DOWNLOAD TUTORIAL:** 
 
 >1) Open our github page located [Here](https://github.com/RogersResources/main)
