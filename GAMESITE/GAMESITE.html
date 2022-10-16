@@ -87,19 +87,6 @@
 <br>
       <iframe id="myframe" style="position: relative; width: 100%; height: 1000px; border: 0; overflow: hidden;"></iframe>
       <script>
-      document.head = document.head || document.getElementsByTagName('head')[0];
-
-      function changeFavicon(src) {
-       var link = document.createElement('link'),
-           oldLink = document.getElementById('dynamic-favicon');
-       link.id = 'dynamic-favicon';
-       link.rel = 'shortcut icon';
-       link.href = src;
-       if (oldLink) {
-        document.head.removeChild(oldLink);
-       }
-       document.head.appendChild(link);
-      }
         var elem = document.getElementById("myframe");
         function openFullscreen() {
           if (elem.requestFullscreen) {
