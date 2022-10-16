@@ -3,19 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Login - Powered by Skyward</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/x-icon" href="https://skyward.iscorp.com/favicon.ico">
+  <title>Unknown URL</title>
+  <link rel="icon" type="image/x-icon" href="">
   </head>
 <body>
   <br>
-  <div class="htmlcode">
-    <select id="disguises">
-      <option value="0">Skyward</option>
-      <option value="1">disguise 1</option>
-      <option value="2">disguise 2</option>
-      <option value="3">disguise 3</option>
+  <div class="disguise">
+    <select id="disguises" oninput="disguise()">
+      <option value="0">Select A Disguise...</option>
+      <option value="1">Google</option>
+      <option value="2">Skyward</option>
+      <option value="3">New Tab</option>
+      <option value="4">Google Classroom</option>
+      <option value="5">Google Docs</option>
+      <option value="6">Google Slides</option>
+      <option value="7">Prosper Portal</option>
+      <option value="8">Gmail</option>
+      <option value="9">Google Drive</option>
+      <option value="10">Edugence</option>
+      <option value="11">Sora</option>
     </select>
+    <select id="disguises">
+      <option value="0">Select A Background...</option>
+      <option value="1">DNA Purple</option>
+      <option value="2">THIS FEATURE IS NOT FINISHED YET!!! IT DOES NOT WORK!!!</option>
+    </select>
+  </div>
+  <div class="htmlcode">
     <h1 class="text">Rogers Resources Hub</h1>
     <h2 class="text">The Official Rogers Resources Site!</h2>
     <h2 class="text">Update Your Version <a href="https://github.com/RogersResources/main" target="_blank" rel="noopener noreferrer">Here</a>
@@ -46,7 +60,7 @@
   </div>
   <div>
     <br>
-    <div class="select" style="text-align:center">
+    <div class="select">
       <select id="select" oninput="select()">
         <option value="0">Select A Game...</option>
         <option value="1">Try-A-Link!</option>
@@ -99,6 +113,56 @@
         }
         </script>
     <script>
+      function disguise() {
+        if (document.getElementById('disguises').value === '0') {
+            changeFavicon('no site');
+            document.title = "Unknown URL";
+        }
+        if (document.getElementById('disguises').value === '1') {
+            changeFavicon('http://www.google.com/favicon.ico');
+            document.title = "Google";
+        }
+        if (document.getElementById('disguises').value === '2') {
+            changeFavicon('https://skyward.iscorp.com/favicon.ico');
+            document.title = "Login - Powered by Skyward";
+        }
+        if (document.getElementById('disguises').value === '3') {
+            changeFavicon('https://o.remove.bg/downloads/8b70eb39-8cec-40a3-a20c-9d6ab4fff6a1/image-removebg-preview.png');
+            document.title = "New Tab";
+        }
+        if (document.getElementById('disguises').value === '4') {
+            changeFavicon('https://ssl.gstatic.com/classroom/favicon.png');
+            document.title = "Classes";
+        }
+        if (document.getElementById('disguises').value === '5') {
+            changeFavicon('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico');
+            document.title = "Google Docs";
+        }
+        if (document.getElementById('disguises').value === '6') {
+            changeFavicon('https://ssl.gstatic.com/docs/presentations/images/favicon5.ico');
+            document.title = "Google Slides";
+        }
+        if (document.getElementById('disguises').value === '7') {
+            changeFavicon('https://portal.prosper-isd.net/favicon.ico');
+            document.title = "Dashboard | RapidIdentity";
+        }
+        if (document.getElementById('disguises').value === '8') {
+            changeFavicon('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');
+            document.title = ('Inbox (' + (Math.floor(Math.random() * 999) + 0) + ') - prosperisd000@k12.prosper-isd.net');
+        }
+        if (document.getElementById('disguises').value === '9') {
+            changeFavicon('https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png');
+            document.title = "My Drive - Google Drive";
+        }
+        if (document.getElementById('disguises').value === '10') {
+            changeFavicon('https://prosper.edugence.com/static/cacher/img/favicon.ico');
+            document.title = "https://prosper.edugence.com/student/#/dashboard";
+        }
+        if (document.getElementById('disguises').value === '11') {
+            changeFavicon('https://soraapp.com/assets/wishbone/10.16.2/assets/images/favicon-192.png');
+            document.title = "Sora";
+        }
+      }
       function select() {
         if (document.getElementById('select').value === '0') {
           document.getElementById("myframe").src = ('');
@@ -231,7 +295,6 @@ btn.addEventListener('click', function handleClick() {
   input.setSelectionRange(end, end);
   input.focus();
 });
-
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 192) {
         location.href = "https://classroom.google.com/h";
@@ -248,7 +311,6 @@ document.addEventListener('keydown', function(event) {
 });
 var close = document.getElementsByClassName("closebtn");
 var i;
-
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function(){
     var div = this.parentElement;
@@ -256,9 +318,61 @@ for (i = 0; i < close.length; i++) {
     setTimeout(function(){ div.style.display = "none"; }, 600);
   }
 }
+document.head = document.head || document.getElementsByTagName('head')[0];
+
+function changeFavicon(src) {
+ var link = document.createElement('link'),
+     oldLink = document.getElementById('dynamic-favicon');
+ link.id = 'dynamic-favicon';
+ link.rel = 'shortcut icon';
+ link.href = src;
+ if (oldLink) {
+  document.head.removeChild(oldLink);
+ }
+ document.head.appendChild(link);
+}
     </script>
   </div>
   <style>
+  ::-webkit-scrollbar {
+      display: none;
+  }
+  .disguise {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 50%;
+  white-space: nowrap;
+}
+    .disguise select {
+      transition-duration: 0.4s;
+      font-family: 'Arial';
+      display: inline-block;
+      width: 100%;
+      cursor: pointer;
+      padding: 10px 15px;
+      outline: 0;
+
+      border-radius: 100px;
+      background: #c08dff;
+      opacity: 0.653623432;
+      color: #000000;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+      .disguise select::-ms-expand {
+          display: none;
+      }
+      .disguise select:hover,
+      .disguise select:focus {
+          color: #ffffff;
+          background: #9743ff;
+      }
+      .disguise select:disabled {
+          opacity: 0.5;
+          pointer-events: none;
+      }
     body {
       background: rgb(32,36,36);
       background: linear-gradient(0deg, rgba(32,36,36,1) 0%, rgba(144,165,255,1) 50%, rgba(92,218,238,1) 100%);
@@ -359,7 +473,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
      color: #000000;
      border: none;
      opacity: 0.653623432;
-     textarea: black
 }
  .input:focus {
      outline:none;
