@@ -14,11 +14,11 @@
     <h2 class="text">The Official Rogers Resources Site!</h2>
     <h2 class="text">Update Your Version <a href="https://github.com/RogersResources/main" target="_blank" rel="noopener noreferrer">Here</a>
     <br>
-    <button class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
-    <br>
-    <button class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen, retro bowl will enlargen, but wont fullscreen using this method.');">Make Screen Cover Tab</button>
-    <br>
     <button class="fullscreenbutton"><a href="data/other.html">Other Games</a></button>
+    <br>
+    <button id="fullscreen1" style="visibility:hidden" class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
+    <br>
+    <button id="fullscreen2" style="visibility:hidden" class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen.');">Make Screen Cover Tab</button>
     <div class="alert">
       <span class="closebtn">&times;</span>  
       <strong>Hazard Hotkeys!</strong>
@@ -96,6 +96,8 @@
       function select() {
         if (document.getElementById('select').value === '0') {
           document.getElementById("myframe").src = ('');
+          document.getElementById("fullscreen1").style.visibility = 'hidden';
+          document.getElementById("fullscreen2").style.visibility = 'hidden';
         }
         if (document.getElementById('select').value === '1') {
           document.getElementById("case").style.visibility = 'visible';
@@ -108,6 +110,10 @@
           document.getElementById("case").style.visibility = 'hidden';
           document.getElementById("caseinput").style.visibility = 'hidden';
           document.getElementById("caseinput2").style.visibility = 'hidden';
+        }
+        if (document.getElementById('select').value !== '0') {
+          document.getElementById("fullscreen1").style.visibility = 'visible';
+          document.getElementById("fullscreen2").style.visibility = 'visible';
         }
         if (document.getElementById('select').value === '2') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy8yMzAxODgyOTI5MTAzMTg2NDEvZmlsZXMvcmIxLmh0bWw=');
