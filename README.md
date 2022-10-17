@@ -2,7 +2,7 @@
 
 **Want to update your version?**
 
-Go to [Here](https://github.com/RogersResources/main)
+Click [Here](https://github.com/RogersResources/main)
 
 ***~~=======================================================~~***
 
@@ -14,7 +14,7 @@ Go to [Here](https://github.com/RogersResources/main)
 
 **Discord Server!**
 
-[Coming Soon!](https://github.com/RogersResources/main)
+Click [Here](https://discord.gg/bD6JFXdtg2)
 
 ***~~=======================================================~~***
 
