@@ -42,7 +42,7 @@
         <br>
         <button id="fullscreen1" style="visibility:hidden" class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
         <br>
-        <button id="fullscreen2" style="visibility:hidden" class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen.');">Make Screen Cover Tab</button>
+        <button id="fullscreen2" style="visibility:hidden" class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden'; window.scrollTo(0, 0); document.documentElement.style.overflow = 'hidden'; alert('Refresh the page to reset.');">Make Screen Cover Tab</button>
         <div class="alert">
           <span class="closebtn">&times;</span>
           <strong>Hazard Hotkeys!</strong>
@@ -154,7 +154,7 @@
         }
         if (document.getElementById('disguises').value === '8') {
           changeFavicon('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');
-          document.title = ('Inbox (' + (Math.floor(Math.random() * 999) + 0) + ') - prosperisd000@k12.prosper-isd.net');
+          document.title = ('Inbox (' + (Math.floor(Math.random() * 125) + 1) + ') - prosperisd000@k12.prosper-isd.net');
         }
         if (document.getElementById('disguises').value === '9') {
           changeFavicon('https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png');
