@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Unknown URL</title>
+  <title>Untitled</title>
   <link rel="icon" type="image/x-icon" href="">
-  </head>
+</head>
+
 <body>
   <br>
   <div class="disguise">
@@ -33,32 +35,32 @@
     <h1 class="text">Rogers Resources Hub</h1>
     <h2 class="text">The Official Rogers Resources Site!</h2>
     <h2 class="text">Update Your Version <a href="https://github.com/RogersResources/main" target="_blank" rel="noopener noreferrer">Here</a>
-    <br>
-    <h2 class="text">Join The Discord <a href="https://discord.gg/bD6JFXdtg2" target="_blank" rel="noopener noreferrer">Here</a>
-    <br>
-    <button class="fullscreenbutton"><a href="data/other.html">Other Games</a></button>
-    <br>
-    <button id="fullscreen1" style="visibility:hidden" class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
-    <br>
-    <button id="fullscreen2" style="visibility:hidden" class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen.');">Make Screen Cover Tab</button>
-    <div class="alert">
-      <span class="closebtn">&times;</span>  
-      <strong>Hazard Hotkeys!</strong>
       <br>
-      Press the key on your keyboard to switch to a different tab!
-      <br>
-      Heres a list of all Hazard Hotkeys:
-      <br>
-      <br>
-      Press the "Esc" to open Prosper Portal
-      <br>
-      Press the "~" or "`" to open Google Classroom
-      <br>
-      Press the "Tab" to open Skyward
-      <br>
-      Press the "🔍︎ (Search)" to open Gmail
-      <br>
-    </div>
+      <h2 class="text">Join The Discord <a href="https://discord.gg/bD6JFXdtg2" target="_blank" rel="noopener noreferrer">Here</a>
+        <br>
+        <button class="fullscreenbutton"><a href="data/other.html">Other Games</a></button>
+        <br>
+        <button id="fullscreen1" style="visibility:hidden" class="fullscreenbutton" onclick="openFullscreen();">Full Screen</button>
+        <br>
+        <button id="fullscreen2" style="visibility:hidden" class="fullscreenbutton" onclick="document.getElementById('myframe').style = 'border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden', alert('Refresh the page to exit fullscreen.');">Make Screen Cover Tab</button>
+        <div class="alert">
+          <span class="closebtn">&times;</span>
+          <strong>Hazard Hotkeys!</strong>
+          <br>
+          Press the key on your keyboard to switch to a different tab!
+          <br>
+          Heres a list of all Hazard Hotkeys:
+          <br>
+          <br>
+          Press the "Esc" to open Prosper Portal
+          <br>
+          Press the "~" or "`" to open Google Classroom
+          <br>
+          Press the "Tab" to open Skyward
+          <br>
+          Press the "🔍︎ (Search)" to open Gmail
+          <br>
+        </div>
   </div>
   <div>
     <br>
@@ -99,72 +101,75 @@
       <br>
       <br>
       <button class="submitbutton" id="caseinput2" style="visibility:hidden" onclick="format();">Format Link</button><input type="text" class="input" id="case" name="myText" style="visibility:hidden" placeholder="Type here..."><button class="submitbutton" id="caseinput" style="visibility:hidden" onclick="validate();">Submit</button>
-</div>
-<br>
-      <iframe id="myframe" style="position: relative; width: 100%; height: 1000px; border: 0; overflow: hidden;"></iframe>
-      <script>
-        var elem = document.getElementById("myframe");
-        function openFullscreen() {
-          if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-          }
+    </div>
+    <br>
+    <iframe id="myframe" style="position: relative; width: 100%; height: 1000px; border: 0; overflow: hidden;"></iframe>
+    <script>
+      onbeforeunload = () => 1
+      var elem = document.getElementById("myframe");
+
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
         }
-        </script>
+      }
+    </script>
     <script>
       function disguise() {
         if (document.getElementById('disguises').value === '0') {
-            changeFavicon('no site');
-            document.title = "Unknown URL";
+          changeFavicon('');
+          document.title = "Untitled";
         }
         if (document.getElementById('disguises').value === '1') {
-            changeFavicon('http://www.google.com/favicon.ico');
-            document.title = "Google";
+          changeFavicon('http://www.google.com/favicon.ico');
+          document.title = "Google";
         }
         if (document.getElementById('disguises').value === '2') {
-            changeFavicon('https://skyward.iscorp.com/favicon.ico');
-            document.title = "Login - Powered by Skyward";
+          changeFavicon('https://skyward.iscorp.com/favicon.ico');
+          document.title = "Login - Powered by Skyward";
         }
         if (document.getElementById('disguises').value === '3') {
-            changeFavicon('https://o.remove.bg/downloads/8b70eb39-8cec-40a3-a20c-9d6ab4fff6a1/image-removebg-preview.png');
-            document.title = "New Tab";
+          changeFavicon('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAeFJREFUOI2NkjtsUlEcxn+gkxwXYuQwc1lqIroKXYE68oqkDyQaE21qYoyP6NLF+AohpbaJMYVeuxWo0Rh5jPaxAh3qYOdymTnMx6HeazE18dvO/3y/nPN957i01prfUkpRrW/RaLbpWxYAQcPAMALkc3P4pc+24rLBZqvN0rtVlFKcJiEE+dwsmVTyD/it2eLl67enAn/r+dPHxGPRY1ApRTo7jVIjpPSRSSWJhK/9E/ZLyRnvhYuLV6+EABfWwKJULOD1evn85SsHBz+4NDGBX0pq9U9s7+7R7e0zGo042+3tUzE3yOdmCRoBwMX9Bw+drI1Wm1KxgMdzjkazBUCn28P98/CQzVqdvjVgMhKmWquNFaSUotFsMRkJOzPLsnDbi+WV1f8qx5bbL6VzfKfbZSoeQwiPYxDCQzqVoNPtObOgEcC1VjF1xfwIgJSSUrEAaKq1LQCm4lGChkEmO+N8inQygWs4HGr7KWz41s05QqHLnBcCIQQVc4PyuuncoPzhPW4hBAvz98aCv3j1hkx2hp3dPfrWgM1a3dnP53L4pTwu53o8xsL83bFsUvqIx6KU102UUgjh4dmTR2RSiWODPqGjfl8vLa/o/O07+vv2jj7qWzp9Y1qvVUw9HA5PWvUvJsnmMDQX24kAAAAASUVORK5CYII=');
+          document.title = "New Tab";
         }
         if (document.getElementById('disguises').value === '4') {
-            changeFavicon('https://ssl.gstatic.com/classroom/favicon.png');
-            document.title = "Classes";
+          changeFavicon('https://ssl.gstatic.com/classroom/favicon.png');
+          document.title = "Classes";
         }
         if (document.getElementById('disguises').value === '5') {
-            changeFavicon('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico');
-            document.title = "Google Docs";
+          changeFavicon('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico');
+          document.title = "Google Docs";
         }
         if (document.getElementById('disguises').value === '6') {
-            changeFavicon('https://ssl.gstatic.com/docs/presentations/images/favicon5.ico');
-            document.title = "Google Slides";
+          changeFavicon('https://ssl.gstatic.com/docs/presentations/images/favicon5.ico');
+          document.title = "Google Slides";
         }
         if (document.getElementById('disguises').value === '7') {
-            changeFavicon('https://portal.prosper-isd.net/favicon.ico');
-            document.title = "Dashboard | RapidIdentity";
+          changeFavicon('https://portal.prosper-isd.net/favicon.ico');
+          document.title = "Dashboard | RapidIdentity";
         }
         if (document.getElementById('disguises').value === '8') {
-            changeFavicon('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');
-            document.title = ('Inbox (' + (Math.floor(Math.random() * 999) + 0) + ') - prosperisd000@k12.prosper-isd.net');
+          changeFavicon('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');
+          document.title = ('Inbox (' + (Math.floor(Math.random() * 999) + 0) + ') - prosperisd000@k12.prosper-isd.net');
         }
         if (document.getElementById('disguises').value === '9') {
-            changeFavicon('https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png');
-            document.title = "My Drive - Google Drive";
+          changeFavicon('https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png');
+          document.title = "My Drive - Google Drive";
         }
         if (document.getElementById('disguises').value === '10') {
-            changeFavicon('https://prosper.edugence.com/static/cacher/img/favicon.ico');
-            document.title = "https://prosper.edugence.com/student/#/dashboard";
+          changeFavicon('https://prosper.edugence.com/static/cacher/img/favicon.ico');
+          document.title = "https://prosper.edugence.com/student/#/dashboard";
         }
         if (document.getElementById('disguises').value === '11') {
-            changeFavicon('https://soraapp.com/assets/wishbone/10.16.2/assets/images/favicon-192.png');
-            document.title = "Sora";
+          changeFavicon('https://soraapp.com/assets/wishbone/10.16.2/assets/images/favicon-192.png');
+          document.title = "Sora";
         }
       }
+
       function select() {
         if (document.getElementById('select').value === '0') {
           document.getElementById("myframe").src = ('');
@@ -193,7 +198,7 @@
         if (document.getElementById('select').value === '3') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy83OTA4NDY0NjE4MjgwOTUxMTQvZmFsbC1ib3lzLmh0bWw=');
         }
-        if(document.getElementById('select').value === '4') {
+        if (document.getElementById('select').value === '4') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly91eHZ2eWthZi5vcmcv');
         }
         if (document.getElementById('select').value === '5') {
@@ -275,80 +280,83 @@
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cubWF0aHBsYXlncm91bmQuY29tL3Jpc2UtaGlnaGVyL2luZGV4Lmh0bWw');
         }
       }
-var wage = document.getElementById("case");
-wage.addEventListener("keydown", function (e) {
-    if (e.keyCode === 13) {
-        validate();
-    }
-});
-function validate() {
-    document.getElementById("myframe").src =(document.getElementById('case').value);
-}
-function format() {
-    document.getElementById("case").value = "https://www.";
-}
-const input = document.getElementById('case');
-const end = input.value.length;
-input.setSelectionRange(end, end);
-input.focus();
-const btn = document.getElementById('caseinput2');
-btn.addEventListener('click', function handleClick() {
-  const end = input.value.length;
-  input.setSelectionRange(end, end);
-  input.focus();
-});
-document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 192) {
-        location.href = "https://classroom.google.com/h";
-    }
-    else if(event.keyCode == 9) {
-        location.href = "https://skyward.iscorp.com/scripts/wsisa.dll/WService=wseduprospertx/seplog01.w";
-    }
-    else if(event.keyCode == 91) {
-        location.href = "https://mail.google.com/mail/u/0/#inbox";
-    }
-    else if(event.keyCode == 27) {
-        location.href = "https://portal.prosper-isd.net/ui/dashboard";
-    }
-});
-var close = document.getElementsByClassName("closebtn");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function(){
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 600);
-  }
-}
-document.head = document.head || document.getElementsByTagName('head')[0];
+      var wage = document.getElementById("case");
+      wage.addEventListener("keydown", function(e) {
+        if (e.keyCode === 13) {
+          validate();
+        }
+      });
 
-function changeFavicon(src) {
- var link = document.createElement('link'),
-     oldLink = document.getElementById('dynamic-favicon');
- link.id = 'dynamic-favicon';
- link.rel = 'shortcut icon';
- link.href = src;
- if (oldLink) {
-  document.head.removeChild(oldLink);
- }
- document.head.appendChild(link);
-}
+      function validate() {
+        document.getElementById("myframe").src = (document.getElementById('case').value);
+      }
+
+      function format() {
+        document.getElementById("case").value = "https://www.";
+      }
+      const input = document.getElementById('case');
+      const end = input.value.length;
+      input.setSelectionRange(end, end);
+      input.focus();
+      const btn = document.getElementById('caseinput2');
+      btn.addEventListener('click', function handleClick() {
+        const end = input.value.length;
+        input.setSelectionRange(end, end);
+        input.focus();
+      });
+      document.addEventListener('keydown', function(event) {
+        if (event.keyCode == 192) {
+          location.href = "https://classroom.google.com/h";
+        } else if (event.keyCode == 9) {
+          location.href = "https://skyward.iscorp.com/scripts/wsisa.dll/WService=wseduprospertx/seplog01.w";
+        } else if (event.keyCode == 91) {
+          location.href = "https://mail.google.com/mail/u/0/#inbox";
+        } else if (event.keyCode == 27) {
+          location.href = "https://portal.prosper-isd.net/ui/dashboard";
+        }
+      });
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function() {
+            div.style.display = "none";
+          }, 600);
+        }
+      }
+      document.head = document.head || document.getElementsByTagName('head')[0];
+
+      function changeFavicon(src) {
+        var link = document.createElement('link'),
+          oldLink = document.getElementById('dynamic-favicon');
+        link.id = 'dynamic-favicon';
+        link.rel = 'shortcut icon';
+        link.href = src;
+        if (oldLink) {
+          document.head.removeChild(oldLink);
+        }
+        document.head.appendChild(link);
+      }
     </script>
   </div>
   <style>
-  ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
       display: none;
-  }
-  .disguise {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 15px;
-  width: 50%;
-  white-space: nowrap;
-}
+    }
+
+    .disguise {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px;
+      width: 50%;
+      white-space: nowrap;
+    }
+
     .disguise select {
       transition-duration: 0.4s;
-      font-family: 'Arial';
+      font-family: Verdana;
       display: inline-block;
       width: 100%;
       cursor: pointer;
@@ -357,40 +365,51 @@ function changeFavicon(src) {
 
       border-radius: 100px;
       background: #c08dff;
-      opacity: 0.653623432;
+      opacity: 0.5;
       color: #000000;
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-  }
-      .disguise select::-ms-expand {
-          display: none;
-      }
-      .disguise select:hover,
-      .disguise select:focus {
-          color: #ffffff;
-          background: #9743ff;
-      }
-      .disguise select:disabled {
-          opacity: 0.5;
-          pointer-events: none;
-      }
-    body {
-      background: rgb(32,36,36);
-      background: linear-gradient(0deg, rgba(32,36,36,1) 0%, rgba(144,165,255,1) 50%, rgba(92,218,238,1) 100%);
     }
+
+    .disguise select::-ms-expand {
+      display: none;
+    }
+
+    .disguise select:hover,
+    .disguise select:focus {
+      color: #ffffff;
+      background: #9743ff;
+    }
+
+    .disguise select:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    body {
+      background: rgb(32, 36, 36);
+      background: linear-gradient(0deg, rgba(32, 36, 36, 1) 0%, rgba(144, 165, 255, 1) 50%, rgba(92, 218, 238, 1) 100%);
+    }
+
     .htmlcode {
       text-align: center;
     }
+
     .select {
       text-align: center;
     }
+
     select {
       text-align: center;
     }
-    .fullscreenbutton {border-radius: 100px;}
+
     .fullscreenbutton {
-      opacity: 0.653623432;
+      border-radius: 100px;
+    }
+
+    .fullscreenbutton {
+      opacity: 0.5;
       transition-duration: 0.4s;
       background-color: #c08dff;
       border: none;
@@ -400,16 +419,16 @@ function changeFavicon(src) {
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-}
+    }
 
 
     .fullscreenbutton:hover {
       background-color: #9743FF;
       color: white;
-}
+    }
 
     .htmlcode {
-      
+
       font-family: "Comic Sans MS", cursive, sans-serif;
       font-size: 17px;
       letter-spacing: 0px;
@@ -421,17 +440,21 @@ function changeFavicon(src) {
       font-variant: normal;
       text-transform: none;
     }
+
     ::before,
     *::after {
       box-sizing: border-box;
     }
+
     .select {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 15px;
-  width: 100%;
-  
-}    .select select {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px;
+      width: 100%;
+
+    }
+
+    .select select {
       transition-duration: 0.4s;
       font-family: 'Arial';
       display: inline-block;
@@ -442,46 +465,57 @@ function changeFavicon(src) {
       border: 0px hidden #000000;
       border-radius: 100px;
       background: #c08dff;
-      opacity: 0.653623432;
+      opacity: 0.5;
       color: #000000;
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-  }
-      .select select::-ms-expand {
-          display: none;
-      }
-      .select select:hover,
-      .select select:focus {
-          color: #ffffff;
-          background: #9743ff;
-      }
-      .select select:disabled {
-          opacity: 0.5;
-          pointer-events: none;
-      }
-body {
-background-color: #330033;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-}
-::placeholder {
-  color: black;
-}
-.input {border-radius: 100px;}
-.input {
-     padding: 8px;
-     font-size: 17px;
-     background-color: #c08dff;
-     color: #000000;
-     border: none;
-     opacity: 0.653623432;
-}
- .input:focus {
-     outline:none;
-     color: black;
-}
+    }
+
+    .select select::-ms-expand {
+      display: none;
+    }
+
+    .select select:hover,
+    .select select:focus {
+      color: #ffffff;
+      background: #9743ff;
+    }
+
+    .select select:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    body {
+      background-color: #330033;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    ::placeholder {
+      color: black;
+    }
+
+    .input {
+      border-radius: 100px;
+    }
+
+    .input {
+      padding: 8px;
+      font-size: 17px;
+      background-color: #c08dff;
+      color: #000000;
+      border: none;
+      opacity: 0.5;
+    }
+
+    .input:focus {
+      outline: none;
+      color: black;
+    }
+
     .submitbutton {
-      opacity: 0.653623432;
+      opacity: 0.5;
       transition-duration: 0.4s;
       background-color: #c08dff;
       border: none;
@@ -492,35 +526,39 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
       text-decoration: none;
       display: inline-block;
       font-size: 17px;
-}
+    }
+
     .submitbutton:hover {
       background-color: #9743FF;
       color: white;
-}
-.alert {
-  padding: 10px;
-  background-color: #9743ff;
-  color: white;
-  font-size: 22px;
-  opacity: 0.653623432;
-  transition: opacity 0.6s;
-  margin-top: 30px;
-}
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  opacity: 0.653623432;
-  font-weight: bold;
-  float: right;
-  font-size: 30px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.closebtn:hover {
-  color: black;
-  opacity: 0.653623432;
-}
+    }
+
+    .alert {
+      padding: 10px;
+      background-color: #9743ff;
+      color: white;
+      font-size: 22px;
+      opacity: 0.5;
+      transition: opacity 0.6s;
+      margin-top: 30px;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      opacity: 0.5;
+      font-weight: bold;
+      float: right;
+      font-size: 30px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+      opacity: 0.5;
+    }
   </style>
 </body>
 
