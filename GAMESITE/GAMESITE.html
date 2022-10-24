@@ -25,10 +25,9 @@
       <option value="10">Edugence</option>
       <option value="11">Sora</option>
     </select>
-    <select id="disguises">
+    <select id="background" oninput="background()">
       <option value="0">Select A Background...</option>
-      <option value="1">DNA Purple</option>
-      <option value="2">THIS FEATURE IS NOT FINISHED YET!!! IT DOES NOT WORK!!!</option>
+      <option value="1">Color Picker</option>
     </select>
   </div>
   <div class="htmlcode">
@@ -118,6 +117,7 @@
       }
     </script>
     <script>
+    
       function disguise() {
         if (document.getElementById('disguises').value === '0') {
           changeFavicon('https://avatars.githubusercontent.com/u/114105250?v=4');
