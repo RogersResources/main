@@ -8,7 +8,7 @@ Click [Here](https://github.com/RogersResources/main)
 
 **Experimental Web Versions!**
 
-Link 1 Click [Here]([https://github.com/RogersResources/main](http://rogers.rf.gd/GAMESITE.html)
+Link 1 Click [Here](https://github.com/RogersResources/main](http://rogers.rf.gd/GAMESITE.html)
 
 ***~~=======================================================~~***
 
