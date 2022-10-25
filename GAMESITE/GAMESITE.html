@@ -37,6 +37,7 @@
     </select>
   </div>
   <div class="htmlcode">
+    <p id="colortext" style="visibility:hidden">Click Here ↓↓↓</p>      <input type="color" style="visibility:hidden" id="color" value="#f6b73c">
     <h1 class="text">Rogers Resources</h1>
     <h2 class="text">Update Your Version <a href="https://github.com/RogersResources/main" target="_blank" rel="noopener noreferrer">Here</a>
       <br>
@@ -71,36 +72,37 @@
     <div class="select">
       <select id="select" oninput="select()">
         <option value="0">Select A Game...</option>
-        <option value="1">Try-A-Link!</option>
-        <option value="2">Retro Bowl</option>
-        <option value="3">Fall Boys</option>
-        <option value="4">Holy Unblocker</option>
-        <option value="5">Drift Hunters</option>
-        <option value="6">Burrito Bison</option>
-        <option value="7">10 More Bullets</option>
-        <option value="8">Launch Ball</option>
-        <option value="9">Asteroids</option>
-        <option value="10">Push And Fork</option>
-        <option value="11">The Pond</option>
-        <option value="12">Vitual Vacation</option>
-        <option value="13">Avabranch</option>
-        <option value="14">Ludum</option>
-        <option value="15">Js13k Games</option>
-        <option value="16">Sorades 13k</option>
-        <option value="17">Hexa Battle</option>
-        <option value="18">Branching Out</option>
-        <option value="19">Shape Experiment</option>
-        <option value="20">Zolmeister</option>
-        <option value="21">Binb</option>
-        <option value="22">WebMSX</option>
-        <option value="23">Javatari</option>
-        <option value="24">Google Baseball</option>
-        <option value="25">Magic Poser</option>
-        <option value="26">Spent</option>
-        <option value="27">Drift Boss</option>
-        <option value="28">Feed That Thing</option>
-        <option value="29">CubeForm</option>
-        <option value="30">Rise Higher</option>
+        <option value="1">Discord</option>
+        <option value="2">Try-A-Link!</option>
+        <option value="3">Retro Bowl</option>
+        <option value="4">Fall Boys</option>
+        <option value="5">Holy Unblocker</option>
+        <option value="6">Drift Hunters</option>
+        <option value="7">Burrito Bison</option>
+        <option value="8">10 More Bullets</option>
+        <option value="9">Launch Ball</option>
+        <option value="10">Asteroids</option>
+        <option value="11">Push And Fork</option>
+        <option value="12">The Pond</option>
+        <option value="13">Vitual Vacation</option>
+        <option value="14">Avabranch</option>
+        <option value="15">Ludum</option>
+        <option value="16">Js13k Games</option>
+        <option value="17">Sorades 13k</option>
+        <option value="18">Hexa Battle</option>
+        <option value="19">Branching Out</option>
+        <option value="20">Shape Experiment</option>
+        <option value="21">Zolmeister</option>
+        <option value="22">Binb</option>
+        <option value="23">WebMSX</option>
+        <option value="24">Javatari</option>
+        <option value="25">Google Baseball</option>
+        <option value="26">Magic Poser</option>
+        <option value="27">Spent</option>
+        <option value="28">Drift Boss</option>
+        <option value="29">Feed That Thing</option>
+        <option value="30">CubeForm</option>
+        <option value="31">Rise Higher</option>
       </select>
       <br>
       <br>
@@ -111,7 +113,6 @@
     <script>
       onbeforeunload = () => 1
       var elem = document.getElementById("myframe");
-
       function openFullscreen() {
         if (elem.requestFullscreen) {
           elem.requestFullscreen();
@@ -121,9 +122,24 @@
           elem.msRequestFullscreen();
         }
       }
-    </script>
-    <script>
-    
+      let colorpicker = document.getElementById('color');
+      setInterval(()=>{
+      	if (document.getElementById('background').value === '1') {
+          let color = colorpicker.value;
+          document.body.style.backgroundColor = color;
+        }
+      }, 200);
+      function background() {
+        if (document.getElementById('background').value === '0') {
+          document.body.style.backgroundColor = "#330033";
+          document.getElementById("color").style.visibility = 'hidden';
+          document.getElementById("colortext").style.visibility = 'hidden';
+        }
+        if (document.getElementById('background').value === '1') {
+          document.getElementById("color").style.visibility = 'visible';
+          document.getElementById("colortext").style.visibility = 'visible';
+        }
+      }    
       function disguise() {
         if (document.getElementById('disguises').value === '0') {
           changeFavicon('https://avatars.githubusercontent.com/u/114105250?v=4');
@@ -182,13 +198,16 @@
           document.getElementById("fullscreen2").style.visibility = 'hidden';
         }
         if (document.getElementById('select').value === '1') {
+          document.getElementById("myframe").src = atob('aHR0cHM6Ly9lLndpZGdldGJvdC5pby9jaGFubmVscy8xMDMwMjQxMTg0MzY4NTYyMjE2LzEwMzAyNDExODYwMDQzNDA3OTA=');
+        }
+        if (document.getElementById('select').value === '2') {
           document.getElementById("case").style.visibility = 'visible';
           document.getElementById("caseinput").style.visibility = 'visible';
           document.getElementById("caseinput2").style.visibility = 'visible';
           document.getElementById('case').value = ''
           document.getElementById("myframe").src = ('about:blank');
         }
-        if (document.getElementById('select').value !== '1') {
+        if (document.getElementById('select').value !== '2') {
           document.getElementById("case").style.visibility = 'hidden';
           document.getElementById("caseinput").style.visibility = 'hidden';
           document.getElementById("caseinput2").style.visibility = 'hidden';
@@ -197,91 +216,91 @@
           document.getElementById("fullscreen1").style.visibility = 'visible';
           document.getElementById("fullscreen2").style.visibility = 'visible';
         }
-        if (document.getElementById('select').value === '2') {
+        if (document.getElementById('select').value === '3') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy8yMzAxODgyOTI5MTAzMTg2NDEvZmlsZXMvcmIxLmh0bWw=');
         }
-        if (document.getElementById('select').value === '3') {
+        if (document.getElementById('select').value === '4') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9kZWJiaWV3YXRlcm1hbnBoZC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy83OTA4NDY0NjE4MjgwOTUxMTQvZmFsbC1ib3lzLmh0bWw=');
         }
-        if (document.getElementById('select').value === '4') {
+        if (document.getElementById('select').value === '5') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly91eHZ2eWthZi5vcmcv');
         }
-        if (document.getElementById('select').value === '5') {
+        if (document.getElementById('select').value === '6') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly96YXlhcnV6b3N0cmVldG9yZ2FuLmNvbS91cGxvYWRzLzUvNS82LzcvNTU2NzE5NC9jdXN0b21fdGhlbWVzLzEzNjczNDkxNDQwMzIzMjA4MS9kcmlmdF9odW50ZXIuaHRtbA==');
         }
-        if (document.getElementById('select').value === '6') {
+        if (document.getElementById('select').value === '7') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly96YXlhcnV6b3N0cmVldG9yZ2FuLmNvbS91cGxvYWRzLzUvNS82LzcvNTU2NzE5NC9jdXN0b21fdGhlbWVzLzYwNzcyMTkyMTkxNzMyMzY3MC9idXJyaXRvLWJpc29uLWxsLmh0bWw=');
         }
-        if (document.getElementById('select').value === '7') {
+        if (document.getElementById('select').value === '8') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9hZHZhbmNlZC1jaGFubmVsZXIuMDIuZ3otYXNzb2NpYXRlcy5jb20vP3Q9dGFtLTEwLW1vcmUtYnVsbGV0cw==');
         }
-        if (document.getElementById('select').value === '8') {
+        if (document.getElementById('select').value === '9') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9sYXVuY2hiYWxsLnNjaWVuY2VtdXNldW0ub3JnLnVrLw==');
         }
-        if (document.getElementById('select').value === '9') {
+        if (document.getElementById('select').value === '10') {
           document.getElementById("myframe").src = atob('aHR0cDovL3d3dy5kb3VnbWNpbm5lcy5jb20vaHRtbC01LWFzdGVyb2lkcw==');
         }
-        if (document.getElementById('select').value === '10') {
+        if (document.getElementById('select').value === '11') {
           document.getElementById("myframe").src = atob('aHR0cDovL2dlbGlzYW0uY29tL29jdG9jYXJpbmEv');
         }
-        if (document.getElementById('select').value === '11') {
+        if (document.getElementById('select').value === '12') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly90aGVwb25kLnpvbG1laXN0ZXIuY29tLw==');
         }
-        if (document.getElementById('select').value === '12') {
+        if (document.getElementById('select').value === '13') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly92aXJ0dWFsdmFjYXRpb24udXMv');
         }
-        if (document.getElementById('select').value === '13') {
+        if (document.getElementById('select').value === '14') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9hdmFicmFuY2guem9sbWVpc3Rlci5jb20v');
         }
-        if (document.getElementById('select').value === '14') {
+        if (document.getElementById('select').value === '15') {
           document.getElementById("myframe").src = atob('aHR0cDovL29tYXJzaGVoYXRhLm1lL2h0bWwvbHVkdW0v');
         }
-        if (document.getElementById('select').value === '15') {
+        if (document.getElementById('select').value === '16') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9qczEza2dhbWVzLmNvbS9lbnRyaWVzLzIwMjI=');
         }
-        if (document.getElementById('select').value === '16') {
+        if (document.getElementById('select').value === '17') {
           document.getElementById("myframe").src = atob('aHR0cDovL21hZXR0aWcuY29tL2NvZGUvY2FudmFzL3N0YXJzaGlwLXNvcmFkZXMtMTNrLw==');
         }
-        if (document.getElementById('select').value === '17') {
+        if (document.getElementById('select').value === '18') {
           document.getElementById("myframe").src = atob('aHR0cDovL2dpYWNvbW90YWcuaW8vaGIv');
         }
-        if (document.getElementById('select').value === '18') {
+        if (document.getElementById('select').value === '19') {
           document.getElementById("myframe").src = atob('aHR0cDovL2hlbnJ5aG9mZm1hbi5jb20vYnJhbmNoaW5nb3V0Lw==');
         }
-        if (document.getElementById('select').value === '19') {
+        if (document.getElementById('select').value === '20') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9zaGFwZXgub3JnLw==');
         }
-        if (document.getElementById('select').value === '20') {
+        if (document.getElementById('select').value === '21') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly96b3Auem9sbWVpc3Rlci5jb20v');
         }
-        if (document.getElementById('select').value === '21') {
+        if (document.getElementById('select').value === '22') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9iaW5iLmNvLw==');
         }
-        if (document.getElementById('select').value === '22') {
+        if (document.getElementById('select').value === '23') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93ZWJtc3gub3JnLw==');
         }
-        if (document.getElementById('select').value === '23') {
+        if (document.getElementById('select').value === '24') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9qYXZhdGFyaS5vcmcv');
         }
-        if (document.getElementById('select').value === '24') {
+        if (document.getElementById('select').value === '25') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9sb2dvcy8yMDE5L2p1bHk0dGgxOS9yMy9qdWx5NHRoMTkuaHRtbA==');
         }
-        if (document.getElementById('select').value === '25') {
+        if (document.getElementById('select').value === '26') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93ZWJhcHAubWFnaWNwb3Nlci5jb20v');
         }
-        if (document.getElementById('select').value === '26') {
+        if (document.getElementById('select').value === '27') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly9wbGF5c3BlbnQub3JnL2h0bWwv');
         }
-        if (document.getElementById('select').value === '27') {
+        if (document.getElementById('select').value === '28') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cubWF0aHBsYXlncm91bmQuY29tL2RyaWZ0LWJvc3MtdjMvaW5kZXguaHRtbA==');
         }
-        if (document.getElementById('select').value === '28') {
+        if (document.getElementById('select').value === '29') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cubWF0aHBsYXlncm91bmQuY29tL21vYmlsZV9mZWVkX3RoYXRfdGhpbmcvaW5kZXguaHRtbA');
         }
-        if (document.getElementById('select').value === '29') {
+        if (document.getElementById('select').value === '30') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cubWF0aHBsYXlncm91bmQuY29tL2N1YmVmb3JtL2luZGV4Lmh0bWw');
         }
-        if (document.getElementById('select').value === '30') {
+        if (document.getElementById('select').value === '31') {
           document.getElementById("myframe").src = atob('aHR0cHM6Ly93d3cubWF0aHBsYXlncm91bmQuY29tL3Jpc2UtaGlnaGVyL2luZGV4Lmh0bWw');
         }
       }
