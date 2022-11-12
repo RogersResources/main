@@ -1,5 +1,29 @@
 ***~~=======================================================~~***
 
+**How To Unblock Files!**
+
+>1) Make sure your file is bookmarked, If it is not, follow these steps:
+>
+   >>1) Type "file://" in a blank tab search bar
+   >>
+   >>2) Copy the RogersResources file url
+   >>
+   >>3) Press the star located in the top right of your screen
+   >>
+   >>4) Make the name RogersResources then press "More..."
+   >>
+   >>5) Then paste the url of the file into the url box and click save
+>
+>2) Click the bookmark on a blank tab
+>
+>3) Then quickly, spam the reload button on your keyboard
+>
+>4) Then you are done, if it didn't work, try it again, it takes a few trys!
+
+*Notice, if your RogersResources file is unzipped, you have to open the zip file first before attempting to complete the steps shown above.*
+
+***~~=======================================================~~***
+
 **Want to update your version?**
 
 Click [Here](https://github.com/RogersResources/main)
