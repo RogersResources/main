@@ -2,6 +2,8 @@
 
 **How To Unblock Files!**
 
+METHOD 1
+
 >1) Make sure your file is bookmarked, If it is not, follow these steps:
 >
    >>1) Type "file://" in a blank tab search bar
@@ -21,6 +23,26 @@
 >4) Then you are done, if it didn't work, try it again, it takes a few trys!
 
 *Notice, if your RogersResources file is unzipped, you have to open the zip file first before attempting to complete the steps shown above.*
+
+METHOD 2 (MAY NOT WORK)
+
+>1) Open the file app
+>
+>2) Find your GAMESITE.html file
+>
+>3) Rename it to GAMESITE.xhtml
+>
+>4) Open the file
+
+METHOD 3 (MAY NOT WORK)
+
+>1) Open the file app
+>
+>2) Find your GAMESITE.html file
+>
+>3) Rename it to GAMESITE.xml
+>
+>4) Open the file
 
 ***~~=======================================================~~***
 
